@@ -1,7 +1,95 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+puts "Creating users.."
+user_attributes = [
+  {
+    first_name: "Alessandra",
+    email: "alessandra@gmail.com",
+    password: "12345678",
+  },
+  {
+    first_name: "Victoria",
+    email: "victoria@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Salo",
+    email: "salo@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Emmanuel",
+    email: "emmanuel@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Baraa",
+    email: "baraa@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Cory",
+    email: "cory@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Daniel",
+    email: "daniel@gmail.com",
+    password: "12345678"
+  },
+
+  {
+    first_name: "Gabriel",
+    email: "gabriel@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Jack",
+    email: "jack@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Leah",
+    email: "leah@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Moshe",
+    email: "moshe@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Narmeen",
+    email: "narmeen@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Ruben",
+    email: "ruben@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Thomas",
+    email: "thomas@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Yoann",
+    email: "yoann@gmail.com",
+    password: "12345678"
+  },
+  {
+    first_name: "Zaneta",
+    email: "zaneta@gmail.com",
+    password: "12345678"
+  }
+]
+User.create!(user_attributes)
+puts "Created #{User.count} users"
+
+salo = User.find_by(first_name: "Salo")
+salo.cuisine_list.add("mexican", "italian", "israeli")
+puts "Salo has cuisine interest in #{salo.cuisine_list}"
+
+
+
