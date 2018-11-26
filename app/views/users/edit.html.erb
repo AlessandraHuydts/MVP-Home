@@ -1,0 +1,8 @@
+<h1>Edit page</h1>
+
+
+<%= simple_form_for @user do |f| %>
+  <!-- Add tags as checkboxes -->
+  <%= f.input :cuisine_list, as: :check_boxes, collection: [ "mexican", "italian", "israeli" ] %>
+  <%= f.submit %>
+<% end %>

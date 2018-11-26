@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   acts_as_votable
   acts_as_voter
 
@@ -10,6 +11,11 @@ class User < ApplicationRecord
 
 def self.matched?(user2)
   self.liked_by user2
+
+
+  acts_as_taggable
+  acts_as_taggable_on :cuisines, :interests, :restrictions
+
 end
 
 # controller:
