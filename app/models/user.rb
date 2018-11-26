@@ -6,16 +6,11 @@ class User < ApplicationRecord
 
   acts_as_votable
   acts_as_voter
-
-
-
-def self.matched?(user2)
-  self.liked_by user2
-
-
   acts_as_taggable
   acts_as_taggable_on :cuisines, :interests, :restrictions
 
+def self.matched?(user2)
+  self.liked_by user2
 end
 
 # controller:
