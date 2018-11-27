@@ -7,6 +7,7 @@ class UserPolicy < ApplicationPolicy
   def index?
     true
   end
+
   def update?
     true
   end
@@ -22,6 +23,7 @@ class UserPolicy < ApplicationPolicy
   def cuisines_edit?
     true
   end
+
   def interests_show?
     true
   end
@@ -31,6 +33,18 @@ class UserPolicy < ApplicationPolicy
   end
 
   def matching?
+    true
+  end
+
+  def bio_show?
+    true
+  end
+
+  def bio_edit?
+    true
+  end
+
+  def temporary_signup_completed?
     true
   end
 end

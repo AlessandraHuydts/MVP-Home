@@ -1,4 +1,5 @@
 class RegistrationController < ApplicationController
+  # refactor the authorizations
   def cuisines_show
     @user = current_user
     authorize @user
@@ -24,10 +25,29 @@ class RegistrationController < ApplicationController
       current_user.interest_list.add(interest)
     end
     current_user.save
-    byebug
-    redirect_to registration_interests_path
+    redirect_to registration_bio_path
   end
 
-  def
+  def bio_show
+    @user = current_user
+    authorize @user
+  end
+
+  def bio_edit
+    @user = current_user
+    authorize @user
+    @user.bio = params[:user][:bio]
+
+    params[:user][:restriction_list].each do |restriction|
+      @user.restriction_list.add(restriction)
+    end
+    @user.save
+
+    render 'temporary_signup_completed'
+  end
+
+  def temporary_signup_completed
+    @user = current_user
+    authorize @user
   end
 end

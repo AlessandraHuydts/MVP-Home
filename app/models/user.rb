@@ -10,6 +10,7 @@ class User < ApplicationRecord
   acts_as_taggable_on :cuisines, :interests, :restrictions
 
 
+
 def matched?(user2)
   self.liked? user2
 end
