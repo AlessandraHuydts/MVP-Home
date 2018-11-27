@@ -1,0 +1,7 @@
+<%= simple_form_for @user, url: registration_interests_edit_path, method: :post do |f| %>
+  <%= f.input :interest_list, as: :check_boxes, collection: [ "skiing", "swimming", "singing" ] %>
+  <%= f.submit %>
+<% end %>
+
+
+
