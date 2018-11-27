@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update, :show] do
      member do
         post "/matching", to: "users#matching"
+        get '/location', to: "users#set_user_location"
+        post '/location/set', to: "users#post_locate"
       end
   end
 

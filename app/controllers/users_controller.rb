@@ -32,6 +32,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def set_user_location
+    @user = current_user
+    authorize @user
+    # latitude = params[:search][:query].split(',').first
+    # longitude = params[:search][:query].split(',').second
+    # @user.update_columns(
+    #   latitude: latitude,
+    #   longitude: longitude
+    # )
+  end
+
+  def post_locate
+    @user = current_user
+    authorize @user
+    latitude = params[:search][:query].split(',').first.to_f
+    longitude = params[:search][:query].split(',').second.to_f
+    @user.update_columns(
+      latitude: latitude,
+      longitude: longitude
+    )
+    byebug
+  end
+
   private
 
   def cuisine_params
