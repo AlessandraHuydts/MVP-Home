@@ -21,6 +21,13 @@
     </li>
   </ul>
 </div>
+<div>
+  <%= link_to "like", matching_user_path(id: @user.id), method: :post%>
+  <%= link_to "dislike", user_path(User.except(current_user).sample(1)) %>
+
+
+
+</div>
 
 
 
