@@ -9,20 +9,14 @@ class User < ApplicationRecord
   acts_as_taggable
   acts_as_taggable_on :cuisines, :interests, :restrictions
 
-def self.matched?(user2)
-  self.liked_by user2
+
+def matched?(user2)
+  self.liked? user2
 end
 
-# controller:
-  def matching
-    @user = User.find_params[:id]
-    current_user.likes @user
-    if current_user.matched?(@user)
-      match = Match.new(user1_id: current_user, user2_id: @user)
-      match.save
-      redirect_to root
-    end
-  end
+def random_user
+  @users = User.all_except(current_user)
+end
 end
 
 

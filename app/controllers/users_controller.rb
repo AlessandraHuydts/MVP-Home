@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :cuisine_params, only: [:update]
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     authorize @user
   end
 
@@ -18,6 +18,18 @@ class UsersController < ApplicationController
     authorize @user
 
     redirect_to user_path(@user)
+  end
+
+  def matching
+    @user = User.find(params[:id])
+    authorize @user
+    current_user.likes @user
+    if @user.matched?(current_user)
+      Match.create!(user1_id: current_user.id, user2_id: @user.id)
+      redirect_to user_path(User.except(current_user).sample(1))
+    else
+      redirect_to user_path(User.except(current_user).sample(1))
+    end
   end
 
   private
