@@ -28,6 +28,7 @@ class RegistrationController < ApplicationController
     redirect_to registration_interests_path
   end
 
-  def
+  def complete
+    @user = current_user
   end
 end

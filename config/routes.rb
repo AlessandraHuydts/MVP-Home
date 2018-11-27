@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   post 'registration/cuisines/edit', to: 'registration#cuisines_edit'
   get 'registration/interests', to: 'registration#interests_show'
   post 'registration/interests/edit', to: 'registration#interests_edit'
+
+  # Route to complete page in the registration controller
+  get 'registration/complete', to: 'registration#complete'
 end
