@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  belongs_to :match_id
+  belongs_to :match
 
 
 end
