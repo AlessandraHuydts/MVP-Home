@@ -30,4 +30,7 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
+  def matching?
+    true
+  end
 end
