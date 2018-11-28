@@ -3,5 +3,14 @@ class RecipePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+    def scrapeing_recipe?
+      true
+    end
+
+    def index?
+      true
+    end
+
   end
 end
