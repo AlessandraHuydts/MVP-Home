@@ -1,5 +1,7 @@
+Recipe.destroy_all
 Match.destroy_all
 User.destroy_all
+
 
 puts "Creating users.."
 user_attributes = [

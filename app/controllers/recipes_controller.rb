@@ -18,12 +18,11 @@ def scrapeing_recipe
 end
 
 def index
+  Recipe.destroy_all
   scrapeing_recipe
   @recipes = policy_scope(Recipe)
   # authorize @recipes
 end
-
-
 
 end
 
