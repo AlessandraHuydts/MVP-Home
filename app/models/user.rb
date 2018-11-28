@@ -9,16 +9,17 @@ class User < ApplicationRecord
   acts_as_taggable
   acts_as_taggable_on :cuisines, :interests, :restrictions
 
+  def matched?(user2)
+    self.liked? user2
+  end
 
-
-def matched?(user2)
-  self.liked? user2
+  def random_user
+    @users = User.all_except(current_user)
+  end
+  # this is for the redirection of new user or already registered user
+  def full_profile?
+    !self.cuisine_list.empty?
+  end
 end
-
-def random_user
-  @users = User.all_except(current_user)
-end
-end
-
 
 

@@ -1,5 +1,10 @@
 class RegistrationController < ApplicationController
   # refactor the authorizations
+  def welcome_page
+    @user = current_user
+    authorize @user
+  end
+
   def cuisines_show
     @user = current_user
     authorize @user
@@ -42,12 +47,6 @@ class RegistrationController < ApplicationController
       @user.restriction_list.add(restriction)
     end
     @user.save
-
-    render 'temporary_signup_completed'
   end
 
-  def temporary_signup_completed
-    @user = current_user
-    authorize @user
-  end
 end
