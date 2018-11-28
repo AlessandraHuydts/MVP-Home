@@ -19,6 +19,7 @@ gem 'webpacker'
 gem "pundit"
 gem 'acts_as_votable', '~> 0.12.0'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
