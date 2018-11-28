@@ -52,7 +52,6 @@ class UsersController < ApplicationController
       latitude: latitude,
       longitude: longitude
     )
-    byebug
   end
 
   private

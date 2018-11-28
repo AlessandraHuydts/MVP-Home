@@ -1,8 +1,10 @@
 <h1>Edit page</h1>
 
+<%= current_user.first_name %>
+<%= current_user.last_name %>
 
-<%= simple_form_for @user do |f| %>
-  <!-- Add tags as checkboxes -->
-  <%= f.input :cuisine_list, as: :check_boxes, collection: [ "mexican", "italian", "israeli" ] %>
-  <%= f.submit %>
-<% end %>
+
+
+<%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+  <% end %>
