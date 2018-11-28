@@ -1,0 +1,9 @@
+<h1>Location !</h1>
+
+
+<%= simple_form_for :search, url:  location_set_user_path, method: :post do |f| %>
+  <%= f.input :query, as: :hidden %>
+  <%= f.submit %>
+<% end %>
+
+

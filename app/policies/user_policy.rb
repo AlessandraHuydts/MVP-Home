@@ -47,4 +47,12 @@ class UserPolicy < ApplicationPolicy
   def temporary_signup_completed?
     true
   end
+
+  def set_user_location?
+    true
+  end
+
+  def post_locate?
+    true
+  end
 end
