@@ -44,15 +44,19 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
-  def temporary_signup_completed?
-    true
-  end
-
   def set_user_location?
     true
   end
 
   def post_locate?
+    true
+  end
+
+  def full_profile?
+    true
+  end
+
+  def welcome_page?
     true
   end
 end

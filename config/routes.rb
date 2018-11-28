@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   # routes for user registration
+  get 'registration/welcome', to: 'registration#welcome_page'
   get 'registration/cuisines', to: 'registration#cuisines_show'
   post 'registration/cuisines/edit', to: 'registration#cuisines_edit'
   get 'registration/interests', to: 'registration#interests_show'
