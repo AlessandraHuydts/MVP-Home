@@ -1,5 +1,4 @@
 class RegistrationController < ApplicationController
-  before_action :authenticate_user!, except: :welcome_page
   # refactor the authorizations
   def welcome_page
     @user = current_user
