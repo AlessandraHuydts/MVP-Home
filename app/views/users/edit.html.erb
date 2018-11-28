@@ -2,7 +2,12 @@
 
 <%= current_user.first_name %>
 <%= current_user.last_name %>
-<%= image_tag current_user.facebook_picture_url %>
+
+<% if current_user.facebook_picture_url.nil? %>
+    <% current_user.facebook_picture_url = "https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2016/01/wallpaper-for-facebook-profile-photo.jpg"%>
+<% end  %>
+
+<%= image_tag (current_user.facebook_picture_url) %>
 
 
 <%= link_to destroy_user_session_path, method: :delete do %>
