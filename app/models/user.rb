@@ -45,4 +45,3 @@ class User < ApplicationRecord
 
 end
 
-

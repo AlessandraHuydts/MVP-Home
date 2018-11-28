@@ -1,3 +1,14 @@
-<h1>This os the welcome page after signing up</h1>
+<h1>This is the welcome page after signing up</h1>
 
 <%= link_to 'Lets get started', registration_cuisines_path %>
+
+
+<%= simple_form_for :search, url:  location_set_user_path(current_user), method: :post do |f| %>
+  <%= f.input :query, as: :hidden %>
+  <%= f.submit %>
+<% end %>
+
+<% content_for :after_js do %>
+    <%= javascript_pack_tag 'location' %>
+
+<% end %>

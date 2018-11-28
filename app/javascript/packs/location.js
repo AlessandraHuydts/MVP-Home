@@ -1,3 +1,5 @@
+console.log("location")
+
 function geoFindMe() {
   const query = document.getElementById("search_query");
 

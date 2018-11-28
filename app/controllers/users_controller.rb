@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :cuisine_params, only: [:update]
-
   def show
     @user = User.find(params[:id])
     authorize @user
@@ -13,8 +11,6 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    params[:user][:cuisine_list].each { |cuisine| @user.cuisine_list.add(cuisine) }
-    @user.save
     authorize @user
 
     redirect_to user_path(@user)
@@ -52,11 +48,6 @@ class UsersController < ApplicationController
       latitude: latitude,
       longitude: longitude
     )
-  end
-
-  private
-
-  def cuisine_params
-    params.require(:user).permit(cuisine_list: [])
+    @user.save
   end
 end
