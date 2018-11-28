@@ -101,6 +101,6 @@ Match.create!(user1: User.first, user2: User.second)
 Match.create!(user1: User.first, user2: User.third)
 Match.create!(user1: User.fourth, user2: User.last)
 
-puts "Created #{Match.count} users"
+puts "Created #{Match.count} matches"
 
 

@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if current_user.full_profile?
-      user_path(User.except(current_user).sample(1))
+      location_user_path(current_user)
+      # user_path(User.except(current_user).sample(1))
     else
       registration_welcome_path
     end
