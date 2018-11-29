@@ -6,7 +6,7 @@
         <% end %>
       </div>
       <div class="matching-icon">
-        <%= link_to user_path(User.except(current_user).sample(1)), class: "navbar-wagon-brand" do %>
+        <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
           <%= image_tag "match_icon.png", height: 50 %>
         <% end %>
       </div>

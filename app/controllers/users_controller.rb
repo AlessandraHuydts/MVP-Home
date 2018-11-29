@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     authorize @user
+    # @current_user = current_user
   end
 
   def edit
@@ -22,9 +23,9 @@ class UsersController < ApplicationController
     current_user.likes @user
     if @user.matched?(current_user)
       Match.create!(user1_id: current_user.id, user2_id: @user.id)
-      redirect_to user_path(User.except(current_user).sample(1))
+      redirect_to user_path(current_user.nearbys.sample(1))
     else
-      redirect_to user_path(User.except(current_user).sample(1))
+      redirect_to user_path(current_user.nearbys.sample(1))
     end
   end
 

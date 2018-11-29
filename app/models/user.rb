@@ -10,6 +10,10 @@ class User < ApplicationRecord
   acts_as_taggable
   acts_as_taggable_on :cuisines, :interests, :restrictions
 
+  # geocoder
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode
+
   def matched?(user2)
     self.liked? user2
   end
