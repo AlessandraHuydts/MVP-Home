@@ -1,7 +1,0 @@
-<h1>Add cuisines</h1>
-
-
-<%= simple_form_for @user do |f| %>
-  <%= f.input :cuisine_list, as: :check_boxes, collection: [ "mexican", "italian", "israeli" ] %>
-  <%= link_to 'Go to add interests', interests_user_path(@user)%>
-<% end %>

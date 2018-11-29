@@ -1,8 +1,12 @@
 class User < ApplicationRecord
+  CUISINES = ["Israeli", "Japanese", "Italian", "Thai", "Chinese", "Mexican", "Greek", "Chinese", "French", "Korean", "Indian", "Spanish"].freeze
+  INTERESTS = ["Swim", "Cook", "Bake", "Read", "Travel", "Run", "Draw", "Play piano", "Write", "Meet new people"].freeze
+  RESTRICTIONS = ["Gluten-Free", "Lactose-Free", "Vegetarian", "Kosher", "Vegan"].freeze
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+    :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]
 
   acts_as_votable
@@ -26,7 +30,7 @@ class User < ApplicationRecord
     !self.cuisine_list.empty?
   end
 
- def self.find_for_facebook_oauth(auth)
+  def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
     user_params[:facebook_picture_url] = auth.info.image
@@ -51,4 +55,3 @@ class User < ApplicationRecord
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 end
-
