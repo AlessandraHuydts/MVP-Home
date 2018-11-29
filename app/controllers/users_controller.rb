@@ -32,12 +32,6 @@ class UsersController < ApplicationController
   def set_user_location
     @user = current_user
     authorize @user
-    # latitude = params[:search][:query].split(',').first
-    # longitude = params[:search][:query].split(',').second
-    # @user.update_columns(
-    #   latitude: latitude,
-    #   longitude: longitude
-    # )
   end
 
   def post_locate
@@ -50,5 +44,7 @@ class UsersController < ApplicationController
       longitude: longitude
     )
     @user.save
+
+    redirect_to user_path(current_user.nearbys.sample(1))
   end
 end

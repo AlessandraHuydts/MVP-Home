@@ -1,11 +1,6 @@
 <h1>Get started</h1>
 
-
 <%= simple_form_for :search, url:  location_set_user_path, method: :post do |f| %>
   <%= f.input :query, as: :hidden %>
   <%= f.submit 'Authorize my location'%>
 <% end %>
-
-
-<%= link_to 'Get started', user_path(User.except(current_user).sample(1)) %>
-
