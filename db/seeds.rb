@@ -54,9 +54,45 @@ user_attributes = [
 User.create!(user_attributes)
 puts "Created #{User.count} users"
 
+puts "Assigning Tags to Alessandra...."
+alessandra = User.find_by(first_name: "Alessandra")
+alessandra.cuisine_list.add("Israeli", "Japanese", "Italian")
+alessandra.interest_list.add("swim", "cook", "bake", "code", "travel")
+alessandra.restriction_list.add("Gluten-Free", "Lactose-Free")
+alessandra.save
+puts "Alessandra has the following tags #{alessandra.cuisine_list}, #{alessandra.interest_list}, #{alessandra.restriction_list}"
+
+puts "Assigning Tags to Victoria...."
+victoria = User.find_by(first_name: "Victoria")
+victoria.cuisine_list.add("Thai", "Chinese", "Isreali")
+victoria.interest_list.add("read", "travel")
+victoria.restriction_list.add("Vegetarian")
+victoria.save
+puts "Victoria has the following tags #{victoria.cuisine_list}, #{victoria.interest_list}, #{victoria.restriction_list}"
+
+
+puts "Assigning Tags to Salo...."
 salo = User.find_by(first_name: "Salo")
-salo.cuisine_list.add("mexican", "italian", "israeli")
-puts "Salo has cuisine interest in #{salo.cuisine_list}"
+salo.cuisine_list.add("Mexican", "Italian", "Israeli")
+salo.interest_list.add("code", "swim", "run")
+salo.restriction_list.add("Kosher")
+salo.save
+puts "Salo has the following tags #{salo.cuisine_list}, #{salo.interest_list}, #{salo.restriction_list}"
+
+puts "Assigning Tags to Emmanuel...."
+emmanuel = User.find_by(first_name: "Emmanuel")
+emmanuel.cuisine_list.add("Greek", "Chinese", "French")
+emmanuel.interest_list.add("code", "swim", "run")
+emmanuel.restriction_list.add("Vegan")
+emmanuel.save
+puts "Emmanuel has the following tags #{emmanuel.cuisine_list}, #{emmanuel.interest_list}, #{emmanuel.restriction_list}"
+
+puts "Assigning Tags to Baraa...."
+baraa = User.find_by(first_name: "Baraa")
+baraa.cuisine_list.add("Korean", "Indian", "Spanish")
+baraa.interest_list.add("play piano", "code", "draw")
+baraa.save
+puts "Baraa has the following tags #{baraa.cuisine_list}, #{baraa.interest_list}, #{baraa.restriction_list}"
 
 
 puts "Creating matches.."
