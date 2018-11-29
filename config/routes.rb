@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post 'registration/interests/edit', to: 'registration#interests_edit'
   get 'registration/bio', to: 'registration#bio_show'
   post 'registration/bio/edit', to: 'registration#bio_edit'
+  get 'registration/completed', to: 'registration#registration_completed'
 
   resources :recipes, only: [:index, :show, :new, :create]
 end

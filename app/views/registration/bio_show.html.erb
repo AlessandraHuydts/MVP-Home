@@ -1,11 +1,12 @@
 <h1>Bio show</h1>
 
 
-<%= simple_form_for @user, url: registration_bio_edit_path, method: :post do |f| %>
+
+<div id = "bio-form">
+  <%= simple_form_for @user, url: registration_bio_edit_path, method: :post do |f| %>
   <%= f.input :bio, as: :text %>
   <%= f.input :restriction_list, as: :check_boxes, collection: [ "kosher", "vegan", "vegetarian" ] %>
   <%= f.submit %>
 <% end %>
 
-
-
+</div>

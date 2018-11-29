@@ -47,6 +47,11 @@ class RegistrationController < ApplicationController
       @user.restriction_list.add(restriction)
     end
     @user.save
+    redirect_to registration_completed_path
   end
 
+  def registration_completed
+    @user = current_user
+    authorize @user
+  end
 end
