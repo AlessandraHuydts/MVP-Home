@@ -1,41 +1,27 @@
-<h1>Show page.. profile page</h1>
-
-<h3><%= @user.first_name %></h3>
-
-
-<p><%=@user.latitude %></p>
-<p><%=@user.longitude %></p>
-
-<div>
-  Cuisine interests
-  <ul>
-    <li>
-      <%= @user.cuisine_list %>
-    </li>
-  </ul>
+<div class="phone-page">
+  <%= image_tag (@user.facebook_picture_url) %>
+  <h1><%= @user.full_name %></h1>
+  <div>
+    Cuisine interests
+    <ul>
+      <li>
+        <%= @user.cuisine_list %>
+      </li>
+    </ul>
+  </div>
+  <div>
+    Cuisine interests
+    <ul>
+      <li>
+        <%= @user.cuisine_list %>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <%= link_to "like", matching_user_path(id: @user.id), method: :post%>
+    <%= link_to "dislike", user_path(current_user.nearbys.sample(1)) %>
+    <p>Current user location</p>
+    <p><%= current_user.latitude %></p>
+    <p><%= current_user.longitude %></p>
+  </div>
 </div>
-
-<div>
-  Cuisine interests
-  <ul>
-    <li>
-      <%= @user.cuisine_list %>
-    </li>
-  </ul>
-</div>
-<div>
-  <%= link_to "like", matching_user_path(id: @user.id), method: :post%>
-  <%= link_to "dislike", user_path(current_user.nearbys.sample(1)) %>
-
-<p>Current user location</p>
-<p><%= current_user.latitude %></p>
-<p><%= current_user.longitude %></p>
-
-
-
-</div>
-
-
-
-
-
