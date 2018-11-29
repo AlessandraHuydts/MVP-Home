@@ -1,5 +1,6 @@
 <%= simple_form_for @user, url: registration_cuisines_edit_path, method: :post do |f| %>
-  <%= f.input :cuisine_list, as: :check_boxes, collection: [ "mexican", "italian", "israeli" ] %>
+
+  <%= f.input :cuisine_list, as: :check_boxes, collection: User::CUISINES %>
   <%= f.submit %>
 <% end %>
 
