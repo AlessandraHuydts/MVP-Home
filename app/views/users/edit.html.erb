@@ -1,15 +1,49 @@
-<h1>Edit page</h1>
-
-<%= current_user.first_name %>
-<%= current_user.last_name %>
-
-<% if current_user.facebook_picture_url.nil? %>
-    <% current_user.facebook_picture_url = "https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2016/01/wallpaper-for-facebook-profile-photo.jpg"%>
-<% end  %>
-
-<%= image_tag (current_user.facebook_picture_url) %>
-
-
-<%= link_to destroy_user_session_path, method: :delete do %>
+<div class="phone-page">
+  <!-- <div class="welcome-message">
+    <h3>Welcome <%= current_user.first_name %></h3>
+  </div> -->
+  <div class="profile-pic">
+    <% if current_user.facebook_picture_url.nil? %>
+      <% current_user.facebook_picture_url = "https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2016/01/wallpaper-for-facebook-profile-photo.jpg"%>
+    <% end  %>
+    <%= image_tag (current_user.facebook_picture_url) %>
+  </div>
+  <div class="sign-out">
+    <%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-  <% end %>
+    <% end %>
+  </div>
+  <div class="user-profile">
+    <div class="full-name">
+      <p>Name: <%= current_user.full_name %></p>
+    </div>
+    <div class="edit-email">
+      <p>Email: <%= current_user.email %></p>
+    </div>
+    <div class="edit-cuisine">
+      <p><%= current_user.first_name %> likes: <%= current_user.cuisine_list %> cuisine</p>
+    </div>
+    <div class="edit-interests">
+      <%= current_user.first_name %> likes...
+      <ul>
+        <li>
+          <%= @current_user.interest_list %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="edit-restrictions">
+    <%= current_user.first_name %> is...
+    <ul>
+      <li>
+        <%= current_user.restriction_list %>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="edit-bio">
+  <%= current_user.first_name %>'s Bio:
+  <p><%= current_user.bio %></p>
+</div>
+</div>
+</div>
