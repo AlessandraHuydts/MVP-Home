@@ -1,26 +1,23 @@
 <div class="navbar-wagon">
-    <% if user_signed_in? %>
-      <div class="profile-icon">
-        <%= link_to edit_user_path(current_user), class: "navbar-wagon-brand" do %>
-          <%= image_tag "profile-icon.png", height: 50 %>
-        <% end %>
-      </div>
-      <div class="matching-icon">
-        <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
-          <%= image_tag "match_icon.png", height: 50 %>
-        <% end %>
-      </div>
-      <div class="message-icon">
-        <%= link_to '#', class: "navbar-wagon-brand" do %>
-          <%= image_tag "message-icon.png", height: 50 %>
-        <% end %>
-      </div>
-    <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
-  </div>
-
-
+  <% if user_signed_in? %>
+    <div class="profile-icon">
+      <%= link_to edit_user_path(current_user), class: "navbar-wagon-brand" do %>
+        <%= image_tag "profile-icon.png", height: 50 %>
+      <% end %>
+    </div>
+    <div class="matching-icon">
+      <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
+        <%= image_tag "match_icon.png", height: 50 %>
+      <% end %>
+    </div>
+    <div class="message-icon">
+      <%= link_to '#', class: "navbar-wagon-brand" do %>
+        <%= image_tag "message-icon.png", height: 50 %>
+      <% end %>
+    </div>
+  <% else %>
+    <!-- Login link (when logged out) -->
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <% end %>
 </div>
-
+</div>
