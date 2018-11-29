@@ -54,5 +54,4 @@ class RegistrationController < ApplicationController
     @user = current_user
     authorize @user
   end
-
 end
