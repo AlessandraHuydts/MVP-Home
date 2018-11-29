@@ -7,7 +7,8 @@ puts "Creating users.."
 user_attributes = [
   {
     first_name: "Alessandra",
-    email: "alessandra2@gmail.com",
+    last_name: "Huydts",
+    email: "alessandra@gmail.com",
     password: "12345678",
     latitude: 32.0763317,
     longitude: 34.7661526,
@@ -16,6 +17,7 @@ user_attributes = [
   },
   {
     first_name: "Victoria",
+    last_name: "Sehgal",
     email: "victoria@gmail.com",
     password: "12345678",
     latitude: 32.0763337,
@@ -25,6 +27,7 @@ user_attributes = [
   },
   {
     first_name: "Salo",
+    last_name: "Charabati",
     email: "salo@gmail.com",
     password: "12345678",
     latitude: 32.0763317,
@@ -34,6 +37,7 @@ user_attributes = [
   },
   {
     first_name: "Emmanuel",
+    last_name: "Asiama",
     email: "emmanuel@gmail.com",
     password: "12345678",
     latitude: 48.7228535,
@@ -43,6 +47,7 @@ user_attributes = [
   },
   {
     first_name: "Baraa",
+    last_name: "Shrem",
     email: "baraa@gmail.com",
     password: "12345678",
     latitude: 48.7228535,
