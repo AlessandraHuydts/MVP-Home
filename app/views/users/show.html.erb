@@ -1,27 +1,50 @@
-<div class="phone-page">
-  <%= image_tag (@user.facebook_picture_url) %>
-  <h1><%= @user.full_name %></h1>
-  <div>
-    Cuisine interests
-    <ul>
-      <li>
-        <%= @user.cuisine_list %>
-      </li>
-    </ul>
+<div class="phonepage">
+  <div class="user-img-swipe">
+    <%= image_tag (@user.facebook_picture_url) %>
+  </div>
+  <div class="name-header">
+    <h1><%= @user.full_name %></h1>
+  </div>
+  <div class="profile">
+    <div class="profile1">
+      <div class="user-cuisines">
+        Cuisine interests
+        <ul>
+          <li>
+            <%= @user.cuisine_list %>
+          </li>
+        </ul>
+      </div>
+      <div class="user-interests">
+        User interests
+        <ul>
+          <li>
+            <%= @user.cuisine_list %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="user-restrictions">
+      Restrictions
+      <ul>
+        <li>
+          <%= @user.cuisine_list %>
+        </li>
+      </ul>
+    </div>
   </div>
   <div>
-    Cuisine interests
-    <ul>
-      <li>
-        <%= @user.cuisine_list %>
-      </li>
-    </ul>
   </div>
-  <div>
-    <%= link_to "like", matching_user_path(id: @user.id), method: :post%>
-    <%= link_to "dislike", user_path(current_user.nearbys.sample(1)) %>
-    <p>Current user location</p>
-    <p><%= current_user.latitude %></p>
-    <p><%= current_user.longitude %></p>
+  <div class="reactions">
+    <div class="like">
+      <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+        <%= image_tag "like.png" %>
+      <% end %>
+    </div>
+    <div class="dislike">
+      <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+        <%= image_tag "dislike.png" %>
+      <% end %>
+    </div>
   </div>
 </div>
