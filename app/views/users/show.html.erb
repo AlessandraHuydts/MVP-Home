@@ -3,7 +3,11 @@
     <%= image_tag (@user.facebook_picture_url) %>
   </div>
   <div class="name-header">
-    <h1><%= @user.full_name %></h1>
+    <% if @user.full_name.length <= 14 %>
+      <h1><%= @user.full_name %></h1>
+    <% else %>
+      <h2><%= @user.full_name %></h2>
+    <% end  %>
   </div>
   <div class="profile">
     <div class="profile1">
