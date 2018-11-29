@@ -2,17 +2,17 @@
   <% if user_signed_in? %>
     <div class="profile-icon">
       <%= link_to edit_user_path(current_user), class: "navbar-wagon-brand" do %>
-        <%= image_tag "profile-icon.png", height: 50 %>
+        <%= image_tag "profile.png", height: 50 %>
       <% end %>
     </div>
     <div class="matching-icon">
       <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
-        <%= image_tag "match_icon.png", height: 50 %>
+        <%= image_tag "fork.png", height: 50 %>
       <% end %>
     </div>
-    <div class="message-icon">
+    <div class="paper-plane-icon">
       <%= link_to '#', class: "navbar-wagon-brand" do %>
-        <%= image_tag "message-icon.png", height: 50 %>
+        <%= image_tag "paper-plane", height: 50 %>
       <% end %>
     </div>
   <% else %>
