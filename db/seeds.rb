@@ -1,3 +1,5 @@
+Message.destroy_all
+ChatRoom.destroy_all
 Recipe.destroy_all
 Match.destroy_all
 User.destroy_all
@@ -107,3 +109,36 @@ Match.create!(user1: User.first, user2: User.third)
 Match.create!(user1: User.fourth, user2: User.last)
 
 puts "Created #{Match.count} matches"
+
+ed = User.create!(
+  facebook_picture_url: "https://avatars0.githubusercontent.com/u/8090140?v=4&s=460",
+  email: "edward@lewagon.org",
+  password: "azertyuiop"
+)
+boris = User.create!(
+  facebook_picture_url: "https://avatars2.githubusercontent.com/u/2471555?v=4&s=460",
+  email: "boris@lewagon.org",
+  password: "azertyuiop"
+)
+seb = User.create!(
+  facebook_picture_url: "https://avatars2.githubusercontent.com/u/414418?v=4&s=460",
+  email: "seb@lewagon.org",
+  password: "azertyuiop"
+)
+chat_room = ChatRoom.create!(name: "general", match: Match.first)
+
+message_1 = Message.create!(
+  content: "Hello",
+  chat_room: chat_room,
+  user: ed
+)
+message_2 = Message.create!(
+  content: "Hey",
+  chat_room: chat_room,
+  user: seb
+)
+message_3 = Message.create!(
+  content: "Yo",
+  chat_room: chat_room,
+  user: boris
+)

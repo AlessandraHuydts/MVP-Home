@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-   devise_for :users,
+  devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
   resources :users, only: [:edit, :update, :show] do
-     member do
-        post "/matching", to: "users#matching"
-        get '/location', to: "users#set_user_location"
-        post '/location/set', to: "users#post_locate"
-      end
+    member do
+      post "/matching", to: "users#matching"
+      get '/location', to: "users#set_user_location"
+      post '/location/set', to: "users#post_locate"
+    end
   end
+
+
 
   # routes for user registration
   get 'registration/welcome', to: 'registration#welcome_page'
@@ -22,4 +24,8 @@ Rails.application.routes.draw do
   get 'registration/completed', to: 'registration#registration_completed'
 
   resources :recipes, only: [:index, :show, :new, :create]
+  post 'chat_rooms/:chat_room_id/messages', to: 'messages#create', as: :chat_room_messages
+  get 'chat_rooms/:id', to: 'chat_rooms#show', as: :chat_room
+
+
 end
