@@ -1,0 +1,63 @@
+.profile-pic img{
+  position: absolute;
+  height: 15%;
+  top: 10%;
+  left: 7%;
+}
+
+.sign-out {
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  text-decoration: underline;
+}
+
+
+
+.full-name {
+    position: absolute;
+    top: 28%;
+    left: 7%;
+}
+
+.edit-email {
+  position: absolute;
+    top: 30%;
+    left: 7%;
+    margin-top: 15px;
+
+}
+
+.edit-cuisine {
+    position: absolute;
+    left: 7%;
+    top: 34%;
+    margin-top: 15px;
+
+
+}
+.edit-interests {
+    position: absolute;
+    top: 42%;
+    margin-top: 10px;
+    left: 7%;
+
+}
+.edit-restrictions {
+  position: absolute;
+    left: 7%;
+    top: 49%;
+    margin-top: 10px;
+
+}
+.edit-bio {
+  position: absolute;
+  left:7%;
+  top:55%;
+  margin-top: 20px;
+  right: 7%;
+  text-align: justify;
+
+
+
+}
