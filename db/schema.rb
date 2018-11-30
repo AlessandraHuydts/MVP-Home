@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_092142) do
+ActiveRecord::Schema.define(version: 2018_11_30_095037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "chats", force: :cascade do |t|
+  create_table "chat_rooms", force: :cascade do |t|
     t.bigint "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["match_id"], name: "index_chats_on_match_id"
+    t.string "name"
+    t.index ["match_id"], name: "index_chat_rooms_on_match_id"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -29,6 +30,16 @@ ActiveRecord::Schema.define(version: 2018_11_29_092142) do
     t.datetime "updated_at", null: false
     t.index ["user1_id"], name: "index_matches_on_user1_id"
     t.index ["user2_id"], name: "index_matches_on_user2_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "chat_room_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -105,8 +116,10 @@ ActiveRecord::Schema.define(version: 2018_11_29_092142) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  add_foreign_key "chats", "matches"
+  add_foreign_key "chat_rooms", "matches"
   add_foreign_key "matches", "users", column: "user1_id"
   add_foreign_key "matches", "users", column: "user2_id"
+  add_foreign_key "messages", "chat_rooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "recipes", "matches"
 end
