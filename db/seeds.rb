@@ -102,43 +102,49 @@ baraa.save
 puts "Baraa has the following tags #{baraa.cuisine_list}, #{baraa.interest_list}, #{baraa.restriction_list}"
 
 
-puts "Creating matches.."
+# puts "Creating matches.."
 
-Match.create!(user1: User.first, user2: User.second)
-Match.create!(user1: User.first, user2: User.third)
-Match.create!(user1: User.fourth, user2: User.last)
+# Match.create!(user1: User.first, user2: User.second)
+# Match.create!(user1: User.first, user2: User.third)
+# Match.create!(user1: User.fourth, user2: User.last)
 
-puts "Created #{Match.count} matches"
+# puts "Created #{Match.count} matches"
 
-ed = User.create!(
-  facebook_picture_url: "https://avatars0.githubusercontent.com/u/8090140?v=4&s=460",
-  email: "edward@lewagon.org",
-  password: "azertyuiop"
-)
-boris = User.create!(
-  facebook_picture_url: "https://avatars2.githubusercontent.com/u/2471555?v=4&s=460",
-  email: "boris@lewagon.org",
-  password: "azertyuiop"
-)
-seb = User.create!(
-  facebook_picture_url: "https://avatars2.githubusercontent.com/u/414418?v=4&s=460",
-  email: "seb@lewagon.org",
-  password: "azertyuiop"
-)
-chat_room = ChatRoom.create!(name: "general", match: Match.first)
+# ed = User.create!(
+#   facebook_picture_url: "https://avatars0.githubusercontent.com/u/8090140?v=4&s=460",
+#   email: "edward@lewagon.org",
+#   password: "azertyuiop",
+#   first_name: "edward",
+#   last_name: "lewagon"
+# )
+# boris = User.create!(
+#   facebook_picture_url: "https://avatars2.githubusercontent.com/u/2471555?v=4&s=460",
+#   email: "boris@lewagon.org",
+#   password: "azertyuiop",
+#   first_name: "boris",
+#   last_name: "lewagon"
+# )
+# seb = User.create!(
+#   facebook_picture_url: "https://avatars2.githubusercontent.com/u/414418?v=4&s=460",
+#   email: "seb@lewagon.org",
+#   password: "azertyuiop",
+#   first_name: "seb",
+#   last_name: "lewagon"
+# )
+# chat_room = ChatRoom.create!(name: "general", match: Match.first)
 
-message_1 = Message.create!(
-  content: "Hello",
-  chat_room: chat_room,
-  user: ed
-)
-message_2 = Message.create!(
-  content: "Hey",
-  chat_room: chat_room,
-  user: seb
-)
-message_3 = Message.create!(
-  content: "Yo",
-  chat_room: chat_room,
-  user: boris
-)
+# message_1 = Message.create!(
+#   content: "Hello",
+#   chat_room: chat_room,
+#   user: ed
+# )
+# message_2 = Message.create!(
+#   content: "Hey",
+#   chat_room: chat_room,
+#   user: seb
+# )
+# message_3 = Message.create!(
+#   content: "Yo",
+#   chat_room: chat_room,
+#   user: boris
+# )

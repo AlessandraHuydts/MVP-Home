@@ -22,7 +22,8 @@ class UsersController < ApplicationController
     authorize @user
     current_user.likes @user
     if @user.matched?(current_user)
-      Match.create!(user1_id: current_user.id, user2_id: @user.id)
+      match = Match.create!(user1_id: current_user.id, user2_id: @user.id)
+      ChatRoom.create!(match: match)
       redirect_to user_path(current_user.nearbys.sample(1))
     else
       redirect_to user_path(current_user.nearbys.sample(1))

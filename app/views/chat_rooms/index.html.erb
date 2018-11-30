@@ -1,0 +1,8 @@
+<h1>My Chats</h1>
+<ul>
+  <% @my_chats.each do |chat| %>
+    <li>
+      <%= link_to chat.match.user1.first_name, chat_room_path(chat) %>
+    </li>
+  <% end %>
+</ul>
