@@ -1,10 +1,10 @@
 .phonepage {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(180deg, rgba(239, 241, 243, 0.6) 0%, rgba(255, 255, 255, 0.006) 51.84%), rgba(239, 241, 243, 0.8);
-
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #303F40;
+    color: #F6F4EF;
 }
 .user-img-swipe img {
   position: absolute;
@@ -12,6 +12,7 @@
   height: 27%;
   left: 20%;
   top: 10%;
+  border-radius: 30px;
 
 }
 
@@ -27,45 +28,49 @@
     margin-right: auto;
     position: relative;
     top: 36%;
+    color: #F6F4EF;
 }
 
 .like {
     position: absolute;
     width: 50px;
     height: 50px;
-    right: 28%;
-    top: 79%;
+    right: 33%;
+    top: 80%;
 }
 
 .dislike {
  position: absolute;
     width: 50px;
     height: 50px;
-    left: 28%;
-    top: 79%;
+    left: 33%;
+    top: 80%;
 }
 
 .profile1 {
   position: absolute;
-  width: 80%;
-  height: 17%;
-  left: 10%;
-  top: 47%;
-  padding: 3%;
-  background: rgba(250, 252, 255, 0.8);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 17%;
+    left: 10%;
+    top: 47%;
+    padding: 3%;
+    background: #E15A5A;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    font-size: 20px;
 
 }
 
 .user-restrictions {
-  position: absolute;
-  width: 80%;
-  height: 10%;
-  left: 10%;
-  top: 65%;
-  margin-top: 1%;
-  padding:3%;
-
-  background: rgba(250, 252, 255, 0.8);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+      position: absolute;
+    width: 80%;
+    height: 10%;
+    left: 10%;
+    top: 65%;
+    margin-top: 1%;
+    padding: 3%;
+    background: #E15A5A;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    font-size: 20px;
 }
