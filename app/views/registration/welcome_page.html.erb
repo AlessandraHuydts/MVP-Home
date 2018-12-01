@@ -6,13 +6,13 @@
       <h1>Welcome</h1>
     </div>
     <div class="welcome-message">
-      <p>Before you start cooking, let us get to know you</p>
+      <p>Before you start cooking, lets build your profile so others know who you are!</p>
     </div>
     <div class="welcome-profile-pic">
       <%= image_tag (current_user.facebook_picture_url) %>
     </div>
     <div class="get-started"
-      <%= link_to 'Next', registration_cuisines_path %>
+      <%= link_to 'Next',  registration_cuisines_edit_path %>
     </div>
     </div>
   </div>

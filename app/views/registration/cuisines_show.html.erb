@@ -1,7 +1,16 @@
-<%= simple_form_for @user, url: registration_cuisines_edit_path, method: :post do |f| %>
-
-  <%= f.input :cuisine_list, as: :check_boxes, collection: User::CUISINES %>
-  <%= f.submit %>
-<% end %>
-
-
+<div class="phonepage-cuisines-show">
+  <div class="part1-bar"></div>
+  <div class="part2"></div>
+  <div class="form-cuisine">
+    <div class="cuisine-list-form">
+      <h3> What type of cuisine do you like most?</h3>
+      <br>
+      <%= simple_form_for @user, url: registration_cuisines_edit_path, method: :post do |f| %>
+        <%= f.input :cuisine_list, as:  :check_boxes, collection: User::CUISINES %>
+      </div>
+    </div>
+    <div class="submit-cuisines btn">
+      <%= f.submit "Next" %>
+    </div>
+  <% end %>
+</div>
