@@ -1,4 +1,4 @@
-.phonepage-cuisines-show {
+.phonepage-list-show {
  display: flex;
     position: relative;
     height: 100vh;
@@ -6,9 +6,25 @@
     background-image: url("5537.jpg");
     color: #black;
     background-size: cover;
+    font-family: Raleway;
+}
+.part2-1 {
+  position: absolute;
+  background: #D3AE43;
+  width: 40%;
+  top: 50px;
+  height: 10px;
+
+}
+.part2-2 {
+  position: absolute;
+  background: #D3AE43;
+  width: 60%;
+  top: 50px;
+  height: 10px;
 }
 
-.form-cuisine {
+.list-form-edit {
     position: absolute;
     top: 10%;
     left: 10%;
@@ -21,7 +37,7 @@
 
 }
 
-.submit-cuisines {
+.submit-form-edit {
   position: absolute;
     background: #D3AE43;
     top: 80%;
