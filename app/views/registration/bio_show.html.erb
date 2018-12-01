@@ -7,11 +7,11 @@
       <%= f.input :bio, as: :text %>
     </div>
     <div class="restriction-form">
-      <h3> Any special dietary restrictions?</h3>
+      <h3> Dietary restrictions?</h3>
       <%= f.input :restriction_list, as: :check_boxes, collection: User::RESTRICTIONS %>
-      <div class="complete-sign-up btn">
-        <%= f.submit "Complete!"%>
-      </div>
-    <% end %>
-  </div>
+    </div>
+    <div class="complete-sign-up btn">
+      <%= f.submit "Complete!"%>
+    </div>
+  <% end %>
 </div>
