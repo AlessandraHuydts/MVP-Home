@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+// .phonepage-chat-index {
+//     display: flex;
+//     position: relative;
+//     height: 100vh;
+//     width: 100vw;
+//     background-image: url("5537.jpg");
+//     color: #black;
+//     background-size: cover;
+// }
+
+.header-matches {
+  position: absolute;
+  color: #D3AE43;
+  text-align: center;
+ right: 25%;
+  top: 5%;
+  text-decoration: bold;
+
+}
+.match-chats {
+  position: absolute;
+}
+
+.gold-text {
+    color:#c3a343;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 26px;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(https://i.imgur.com/XKq0iHI.png) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+}
+
