@@ -12,29 +12,23 @@
   <div class="profile">
     <div class="profile1">
       <div class="user-cuisines">
-        Cuisine interests
-        <ul>
-          <li>
-            <%= @user.cuisine_list %>
-          </li>
-        </ul>
+        <h5>Cuisine List: </h5>
+        <p><% @user.cuisine_list.each do |cuisine| %>
+            #<%= cuisine %>
+          <% end %></p>
       </div>
       <div class="user-interests">
-        User interests
-        <ul>
-          <li>
-            <%= @user.interest_list %>
-          </li>
-        </ul>
+        <h5>User interests: </h5>
+        <p><% @user.interest_list.each do |interest| %>
+            #<%= interest %>
+          <% end %></p>
       </div>
     </div>
     <div class="user-restrictions">
-      Restrictions
-      <ul>
-        <li>
-          <%= @user.restriction_list %>
-        </li>
-      </ul>
+      <h5>Restrictions: </h5>
+      <p><% @user.restriction_list.each do |restriction| %>
+          #<%= restriction %>
+        <% end %></p>
     </div>
   </div>
   <div>

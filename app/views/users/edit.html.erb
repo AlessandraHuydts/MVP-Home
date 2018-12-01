@@ -1,4 +1,4 @@
-<div class="phone-page">
+<div class="phonepage-edit">
   <!-- <div class="welcome-message">
     <h3>Welcome <%= current_user.first_name %></h3>
   </div> -->
@@ -14,36 +14,39 @@
     <% end %>
   </div>
   <div class="user-profile">
-    <div class="full-name">
-      <p>Name: <%= current_user.full_name %></p>
+    <div class="basic-info">
+      <div class="full-name">
+        <p>Name: <%= current_user.full_name %></p>
+      </div>
+      <div class="edit-email">
+        <p>Email: <%= current_user.email %></p>
+      </div>
     </div>
-    <div class="edit-email">
-      <p>Email: <%= current_user.email %></p>
+    <div class="interests">
+      <div class="edit-cuisine">
+        <h5>Cuisine List: </h5>
+        <p><% @user.cuisine_list.each do |cuisine| %>
+            #<%= cuisine %>
+          <% end %></p>
+      </div>
+      <div class="edit-interests">
+        <h5>User interests: </h5>
+        <p><% @user.interest_list.each do |interest| %>
+            #<%= interest %>
+          <% end %></p>
+      </div>
     </div>
-    <div class="edit-cuisine">
-      <p><%= current_user.first_name %> likes: <%= current_user.cuisine_list %> cuisine</p>
-    </div>
-    <div class="edit-interests">
-      <%= current_user.first_name %> likes...
-      <ul>
-        <li>
-          <%= @current_user.interest_list %>
-        </li>
-      </ul>
+    <div class="edit-restrictions">
+      <h5>Restrictions: </h5>
+      <p><% @user.restriction_list.each do |restriction| %>
+          #<%= restriction %>
+        <% end %></p>
     </div>
   </div>
-  <div class="edit-restrictions">
-    <%= current_user.first_name %> is...
-    <ul>
-      <li>
-        <%= current_user.restriction_list %>
-      </li>
-    </ul>
+  <div class="edit-bio">
+    <%= current_user.first_name %>'s Bio:
+    <p><%= current_user.bio %></p>
   </div>
-</div>
-<div class="edit-bio">
-  <%= current_user.first_name %>'s Bio:
-  <p><%= current_user.bio %></p>
 </div>
 </div>
 </div>
