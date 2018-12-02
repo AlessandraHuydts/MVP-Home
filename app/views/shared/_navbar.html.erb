@@ -2,14 +2,16 @@
   <% if user_signed_in? %>
     <div class="profile-icon">
       <%= link_to edit_user_path(current_user), class: "navbar-wagon-brand" do %>
-        <%= image_tag "profile.png", height: 50 %>
+        <%= image_tag "user.png", height: 50 %>
       <% end %>
     </div>
-    <div class="matching-icon">
-      <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
-        <%= image_tag "fork.png", height: 50 %>
-      <% end %>
-    </div>
+    <% if !current_page?(controller: 'users', action: 'show') %>
+      <div class="matching-icon">
+        <%= link_to user_path(current_user.nearbys.sample(1)), class: "navbar-wagon-brand" do %>
+          <%= image_tag "fork.png", height: 50 %>
+        <% end %>
+      </div>
+    <% end %>
     <div class="paper-plane-icon">
       <%= link_to chat_rooms_path, class: "navbar-wagon-brand" do %>
         <%= image_tag "paper-plane.png", height: 50 %>
@@ -19,5 +21,4 @@
     <!-- Login link (when logged out) -->
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
   <% end %>
-</div>
 </div>
