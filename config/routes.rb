@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   get 'chat_rooms/:id', to: 'chat_rooms#show', as: :chat_room
   get 'chat_rooms', to: 'chat_rooms#index'
 
+  mount ActionCable.server => "/cable"
 
 end
