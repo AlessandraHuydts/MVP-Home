@@ -11,23 +11,23 @@
   </div>
   <div class="profile">
     <div class="profile1">
-      <div class="user-cuisines">
+      <div class="user-cuisines tags">
         <h5>Cuisine List: </h5>
-        <p><% @user.cuisine_list.each do |cuisine| %>
-            #<%= cuisine %>
-          <% end %></p>
+        <% @user.cuisine_list.each do |cuisine| %>
+          <span class="tag"><%= cuisine %></span>
+        <% end %>
       </div>
-      <div class="user-interests">
+      <div class="user-interests tags">
         <h5>User interests: </h5>
         <p><% @user.interest_list.each do |interest| %>
-            #<%= interest %>
+            <span class="tag"><%= interest %></span>
           <% end %></p>
       </div>
     </div>
     <div class="user-restrictions">
       <h5>Restrictions: </h5>
       <p><% @user.restriction_list.each do |restriction| %>
-          #<%= restriction %>
+          <span class="tag"><%= restriction %></span>
         <% end %></p>
     </div>
   </div>
