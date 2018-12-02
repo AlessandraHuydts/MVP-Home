@@ -1,5 +1,6 @@
 Rails.application.configure do
 
+
   config.action_cable.url = "wss://www.mvp-home.herokuapp.top/cable"
   config.action_cable.allowed_request_origins = [ "http://www.mvp-home.herokuapp.top", "https://www.mvp-home.herokuapp.top" ]
 
@@ -30,7 +31,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
