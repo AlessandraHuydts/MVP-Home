@@ -1,36 +1,31 @@
 
+.form-group{
+	
+ justify-content: center;
+}
 .banner {
-	width:300px;
   color: white;
   text-align: center;
-  height: 70vh;
+  height: 120vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  
-  
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 .banner h1 {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
-.banner p {
+.banner-content {
   font-size: 25px;
   font-weight: lighter;
-   color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   opacity: 0.6;
-  margin-bottom: 30px;
-  justify-content:space-around;
+  padding-bottom:70px;
 }
-.banner-content{
-	padding-bottom:100px;
-}
-
-
 .submit{
-  padding-bottom:90;
-}
-.form-group{
-    padding-bottom:90;
+	padding-bottom: 40px;
+	align-items:baseline;
 }
