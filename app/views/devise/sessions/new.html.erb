@@ -10,10 +10,13 @@
       <h3> Building connections through food! </h3>
     </div>
     <div class="facebook-login">
-      <%= image_tag "login-facebook.png" %>
+      <%- resource_class.omniauth_providers.each do |provider| %>
+        <%= link_to omniauth_authorize_path(resource_name, provider) do %>
+          <%= image_tag "login-facebook.png", height: 50 %>
+        <% end %>
+      <% end %>
     </div>
   </div>
-  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 </div>
 <!--  -->
 <%= render "devise/shared/links" %>
