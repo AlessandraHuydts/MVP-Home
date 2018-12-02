@@ -1,21 +1,14 @@
 .phonepage-white {
-display: flex;
+    display: flex;
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: #303F40;
-    color: #303F40;
+    background-image: url("5537.jpg");
+    color: #black;
+    background-size: cover;
 }
 
-.card-edit-page {
- height: 90%;
-    width: 80%;
-    background: #F6F4EF;
-    top: 5%;
-    position: absolute;
-    left: 10%;
-    border-radius: 20px;
-}
+
 .part1-bar {
     position: absolute;
     background: white;
@@ -26,7 +19,7 @@ display: flex;
 }
 .part2 {
   position: absolute;
-  background: #DB9D5B;
+  background: #D3AE43;
   width: 20%;
   top: 50px;
   height: 10px;
@@ -35,8 +28,12 @@ display: flex;
 .welcome {
     position: absolute;
     top: 10%;
-    left: 17%;
+    left: 14%;
     text-align: center;
+    color: #D3AE43;
+    h1 {
+      font-size: 60px;
+    }
 }
 .welcome-message {
   position: absolute;
@@ -52,12 +49,12 @@ display: flex;
     top: 40%;
     height: 30%;
     left: 15%;
-    border-radius: 30px;
+    // border-radius: 30px;
 
 }
 .get-started {
     position: absolute;
-    background: #E15A5A;
+    background: #D3AE43;
     top: 80%;
     right: 11%;
     padding: 45px;

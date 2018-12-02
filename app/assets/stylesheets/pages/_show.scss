@@ -3,8 +3,9 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: #303F40;
-    color: #F6F4EF;
+    background-image: url("5537.jpg");
+    color: #black;
+    background-size: cover;
 }
 .user-img-swipe img {
   position: absolute;
@@ -12,7 +13,7 @@
   height: 27%;
   left: 20%;
   top: 10%;
-  border-radius: 30px;
+  // border-radius: 30px;
 
 }
 
@@ -28,7 +29,7 @@
     margin-right: auto;
     position: relative;
     top: 36%;
-    color: #F6F4EF;
+    color: #D3AE43;
 }
 
 .like {
@@ -54,13 +55,27 @@
     left: 10%;
     top: 47%;
     padding: 3%;
-    background: #E15A5A;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
     font-size: 20px;
+    border-style: solid;
+    border-color: #D3AE43;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
 
 }
+.profile1 h5 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60%;
+}
+.user-interests {
+  padding-top: 2px;
+}
 
+.profile1 p {
+  font-size: 18px;
+  line-height: 60%;
+}
 .user-restrictions {
       position: absolute;
     width: 80%;
@@ -69,8 +84,32 @@
     top: 65%;
     margin-top: 1%;
     padding: 3%;
-    background: #E15A5A;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
     font-size: 20px;
+    border-style: solid;
+    border-color: #D3AE43;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
+
+.user-restrictions p {
+  font-size: 18px;
+  line-height: 60%;
+}
+
+.user-restrictions h5 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+

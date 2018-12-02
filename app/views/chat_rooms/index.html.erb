@@ -1,8 +1,18 @@
-<h1>My Chats</h1>
-<ul>
-  <% @my_chats.each do |chat| %>
-    <li>
-      <%= link_to chat.match.user1.first_name, chat_room_path(chat) %>
-    </li>
-  <% end %>
-</ul>
+<div class="phonepage-chat-index">
+  <div class="header-matches">
+    <h1>My Chats</h1>
+  </div>
+  <div class="match-chats">
+    <% @my_chats.each do |chat| %>
+      <div class="match-card">
+        <!-- <div id="match-image">
+          <%= image_tag (chat.match.user1.facebook_picture_url) %>
+        </div> -->
+        <div id="match-name">
+          <%= link_to chat.match.user1.first_name, chat_room_path(chat) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<h1 class="gold-text">The Blog Market</h1>
