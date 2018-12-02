@@ -5,9 +5,6 @@
   <div class="match-chats">
     <% @my_chats.each do |chat| %>
       <div class="match-card">
-        <!-- <div id="match-image">
-          <%= image_tag (chat.match.user1.facebook_picture_url) %>
-        </div> -->
         <div id="match-name">
           <%= link_to chat.match.user1.first_name, chat_room_path(chat) %>
         </div>
