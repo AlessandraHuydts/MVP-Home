@@ -46,6 +46,6 @@ class UsersController < ApplicationController
     )
     @user.save
 
-    redirect_to user_path(current_user.nearbys.sample(1))
+    redirect_to user_path(current_user.nearbys.sample.id)
   end
 end

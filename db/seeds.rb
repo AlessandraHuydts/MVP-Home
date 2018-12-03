@@ -12,8 +12,8 @@ user_attributes = [
     last_name: "Huydts",
     email: "alessandra@gmail.com",
     password: "12345678",
-    latitude: 32.0763317,
-    longitude: 34.7661526,
+    latitude: 10.0763317,
+    longitude: 20.7661526,
     facebook_picture_url: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1543526849/ale.jpg",
     bio: " I am half German and half Dutch, but currently live in Tel Aviv. I love to cook, bake, swim and spend time with friends. I am very exited to try this application:)"
   },
