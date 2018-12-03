@@ -1,68 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Shadows+Into+Light');
 .phone-page-home {
   display: flex;
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-image: asset-url("soft-platter.jpg");
+  background-image: asset-url("cooking1.jpg");
   color: black;
   background-size: cover;
+}
+
+.logo-gold {
+    position: absolute;
+    top: 21%;
+    left: 18%;
+h1{
+    font-family: 'Poiret One', cursive;
+    font-size: 66px;
+}
 
 }
-.at-home {
-  position: absolute;
-    top: 8%;
+
+
+.logo-gold img {
+    position: absolute;
+    height: 20%;
+    top: 17%;
+    left: 26%;
+
+}
+.tagline {
+      position: absolute;
     left: 10%;
     right: 10%;
-    text-align: center;
-  h1 {
-    font-family: 'Permanent Marker';
-    font-size: 70px;
-  }
-
-}
-.logo {
-    position: absolute;
-    top: 5%;
-    left: 42%;
-
-  img{
-    height: 70px;
-    width: 70px;
-}
-}
-.tag-line {
-  opacity: 1;
-  text-align: center;
-  color: #D3AE43;
+    top: 7%;
   h3 {
+    font-size: 26px;
+    color: #D3AE43;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.fb-login {
     position: absolute;
-    font-size: 45px;
-    font-family: 'Permanent Marker', cursive;
-    opacity: 1;
-    top: 5%
-  }
+    top: 44%;
+    left: 12%;
+    img:hover {
+      box-shadow: 5px 10px 40px rgba(0,0,0,.2);
+    }
 }
-.facebook-login {
-  position: absolute;
-  top: 71%;
-  left: 8%;
 
-  img {
-    width: 250px;
-    height: 70px;
 
-  }
-}
-.content-signin-page {
-  position: absolute;
-  top: 24%;
-  left: 10%;
-  right: 10%;
-  bottom: 25%;
-
-  border-style: solid;
-  border-color: #D3AE43;
-  background: rgba(255, 255, 255, 0.8);
-}
