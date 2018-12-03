@@ -12,7 +12,10 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/navbar' %>
+    <% if current_page? ('/registration/completed') %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= yield :after_js %>
