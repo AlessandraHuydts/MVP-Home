@@ -5,6 +5,7 @@
   <%= f.input :bio, as: :text %>
   <%= f.input :restriction_list, as: :check_boxes, collection: [ "kosher", "vegan", "vegetarian" ] %>
   <%= f.submit %>
+  <%= link_to "recipes", "/cities.html", class: "btn btn-primary" %>
 <% end %>
 
 
