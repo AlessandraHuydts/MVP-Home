@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  root to: 'pages#home'
+
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
   resources :users, only: [:edit, :update, :show] do
     member do
@@ -10,8 +13,6 @@ Rails.application.routes.draw do
       post '/location/set', to: "users#post_locate"
     end
   end
-
-
 
   # routes for user registration
   get 'registration/welcome', to: 'registration#welcome_page'

@@ -1,5 +1,6 @@
 class RegistrationController < ApplicationController
   # refactor the authorizations
+  layout 'registration'
   def welcome_page
     @user = current_user
     authorize @user
