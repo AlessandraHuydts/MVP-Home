@@ -2,7 +2,6 @@ class User < ApplicationRecord
   CUISINES = ["Israeli", "Japanese", "Italian", "Thai", "Chinese", "Mexican", "Greek", "Chinese", "French", "Korean", "Indian", "Spanish"].freeze
   INTERESTS = ["Swim", "Cook", "Bake", "Read", "Travel", "Run", "Draw", "Play piano", "Write", "Meet new people"].freeze
   RESTRICTIONS = ["Gluten-Free", "Lactose-Free", "Vegetarian", "Kosher", "Vegan"].freeze
-
   has_many :messages, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
