@@ -12,7 +12,7 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <% if current_page? ('/registration/completed') %>
+    <% if current_page?('/registration/completed') %>
     <% else %>
       <%= render 'shared/navbar' %>
     <% end %>

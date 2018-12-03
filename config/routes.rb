@@ -14,8 +14,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   # routes for user registration
   get 'registration/welcome', to: 'registration#welcome_page'
   get 'registration/cuisines', to: 'registration#cuisines_show'
