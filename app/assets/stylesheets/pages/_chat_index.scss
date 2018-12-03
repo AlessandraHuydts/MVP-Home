@@ -3,6 +3,9 @@
     display: flex;
     position: relative;
     height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100vw;
     background-image: asset-url("marble-b.jpg");
     color: #black;
@@ -10,16 +13,24 @@
 }
 
 .header-matches {
-  position: absolute;
   color: #D3AE43;
   text-align: center;
- right: 25%;
+  right: 25%;
   top: 5%;
   text-decoration: bold;
+  margin: 15px 0px;
+
+  h1{
+    font-weight: 800;
+  }
+
 
 }
 .match-chats {
-  position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gold-text {
@@ -31,5 +42,48 @@
     url(https://i.imgur.com/XKq0iHI.png) repeat;
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
+}
+
+.match-card {
+  background-color: #F1F1F1;
+  width: 80%;
+  height: 100px;
+  margin: 10px 0px;
+  display: flex;
+  border: 1px solid #D3AE43;
+}
+
+.user-avatar{
+  text-align: center;
+}
+
+.match-message-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-chat {
+    height: 100PX;
+    border-radius: 50%;
+    width: 100px;
+    padding: 5px;
+}
+.match-message-name{
+  height: 25%;
+  margin-top: 3px;
+  a{
+    color: black;
+    font-weight: 800;
+  }
+}
+
+.match-message-content{
+  height: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 3px;
+}
+.name-chat{
+  color: black;
 }
 

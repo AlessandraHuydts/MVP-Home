@@ -4,6 +4,7 @@ class ChatRoomsController < ApplicationController
   end
 
   def index
+
     @my_chats = []
     ChatRoom.all.each do |chat|
       if chat.match.user1 == current_user || chat.match.user2 == current_user
