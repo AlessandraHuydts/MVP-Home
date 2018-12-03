@@ -1,0 +1,52 @@
+.phonepage-list-show {
+ display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: asset-url("marble-b.jpg");
+    color: #black;
+    background-size: cover;
+    font-family: Raleway;
+}
+.part2-1 {
+  position: absolute;
+  background: #D3AE43;
+  width: 40%;
+  top: 50px;
+  height: 10px;
+
+}
+.part2-2 {
+  position: absolute;
+  background: #D3AE43;
+  width: 60%;
+  top: 50px;
+  height: 10px;
+}
+
+.list-form-edit {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    border-style: solid;
+    border-color: #D3AE43;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+
+}
+
+.submit-form-edit {
+  position: absolute;
+    background: #D3AE43;
+    top: 80%;
+    right: 11%;
+    padding: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    color: #F6F4EF;
+    font-weight: bold;
+    font-size: 20px;
+}

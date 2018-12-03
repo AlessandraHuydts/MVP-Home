@@ -1,3 +1,5 @@
+console.log("location")
+
 function geoFindMe() {
   const query = document.getElementById("search_query");
 
@@ -9,14 +11,13 @@ function geoFindMe() {
   function success(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
+    console.log("Hello"),
     query.value = [`${latitude}`,`${longitude}`]
   }
 
   function error() {
     query.value = "Unable to retrieve your location";
   }
-
-  query.innerHTML = "<p>Locating…</p>";
 
 
   navigator.geolocation.getCurrentPosition(success, error);

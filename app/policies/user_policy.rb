@@ -59,4 +59,8 @@ class UserPolicy < ApplicationPolicy
   def welcome_page?
     true
   end
+
+  def registration_completed?
+    true
+  end
 end

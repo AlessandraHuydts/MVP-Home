@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'pages#home'
+  devise_for :users,
+    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
   resources :users, only: [:edit, :update, :show] do
-     member do
-        post "/matching", to: "users#matching"
-        get '/location', to: "users#set_user_location"
-        post '/location/set', to: "users#post_locate"
-      end
+    member do
+      post "/matching", to: "users#matching"
+      get '/location', to: "users#set_user_location"
+      post '/location/set', to: "users#post_locate"
+    end
   end
 
   # routes for user registration
@@ -18,9 +22,15 @@ Rails.application.routes.draw do
   post 'registration/interests/edit', to: 'registration#interests_edit'
   get 'registration/bio', to: 'registration#bio_show'
   post 'registration/bio/edit', to: 'registration#bio_edit'
+  get 'registration/completed', to: 'registration#registration_completed'
 
 
   resources :recipes, only: [:index, :show, :new, :create]
-  # get 'recipes', to: 'recipes/index'
+
+  post 'chat_rooms/:chat_room_id/messages', to: 'messages#create', as: :chat_room_messages
+  get 'chat_rooms/:id', to: 'chat_rooms#show', as: :chat_room
+  get 'chat_rooms', to: 'chat_rooms#index'
+
+  mount ActionCable.server => "/cable"
 
 end

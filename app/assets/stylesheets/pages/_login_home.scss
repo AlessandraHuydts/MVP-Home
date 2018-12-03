@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.phone-page-home {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: asset-url("soft-platter.jpg");
+  color: black;
+  background-size: cover;
+
+}
+.at-home {
+  position: absolute;
+    top: 8%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+  h1 {
+    font-family: 'Permanent Marker';
+    font-size: 70px;
+  }
+
+}
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 42%;
+
+  img{
+    height: 70px;
+    width: 70px;
+}
+}
+.tag-line {
+  opacity: 1;
+  text-align: center;
+  color: #D3AE43;
+  h3 {
+    position: absolute;
+    font-size: 45px;
+    font-family: 'Permanent Marker', cursive;
+    opacity: 1;
+    top: 5%
+  }
+}
+.facebook-login {
+  position: absolute;
+  top: 71%;
+  left: 8%;
+
+  img {
+    width: 250px;
+    height: 70px;
+
+  }
+}
+.content-signin-page {
+  position: absolute;
+  top: 24%;
+  left: 10%;
+  right: 10%;
+  bottom: 25%;
+
+  border-style: solid;
+  border-color: #D3AE43;
+  background: rgba(255, 255, 255, 0.8);
+}

@@ -1,35 +1,48 @@
-<h1>Show page.. profile page</h1>
-
-<h3><%= @user.first_name %></h3>
-
-
-
-<div>
-  Cuisine interests
-  <ul>
-    <li>
-      <%= @user.cuisine_list %>
-    </li>
-  </ul>
+<div class="phonepage">
+  <div class="user-img-swipe">
+    <%= image_tag (@user.facebook_picture_url) %>
+  </div>
+  <div class="name-header">
+    <% if @user.full_name.length <= 14 %>
+      <h1><%= @user.full_name %></h1>
+    <% else %>
+      <h2><%= @user.full_name %></h2>
+    <% end  %>
+  </div>
+  <div class="profile">
+    <div class="profile1">
+      <div class="user-cuisines tags">
+        <h5>Cuisine List: </h5>
+        <% @user.cuisine_list.each do |cuisine| %>
+          <span class="tag"><%= cuisine %></span>
+        <% end %>
+      </div>
+      <div class="user-interests tags">
+        <h5>User interests: </h5>
+        <p><% @user.interest_list.each do |interest| %>
+            <span class="tag"><%= interest %></span>
+          <% end %></p>
+      </div>
+    </div>
+    <div class="user-restrictions">
+      <h5>Restrictions: </h5>
+      <p><% @user.restriction_list.each do |restriction| %>
+          <span class="tag"><%= restriction %></span>
+        <% end %></p>
+    </div>
+  </div>
+  <div>
+  </div>
+  <div class="reactions" id= "target-hide-icon-navbar">
+    <div class="like">
+      <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+        <%= image_tag "like.png" %>
+      <% end %>
+    </div>
+    <div class="dislike">
+      <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+        <%= image_tag "dislike.png" %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<div>
-  Cuisine interests
-  <ul>
-    <li>
-      <%= @user.cuisine_list %>
-    </li>
-  </ul>
-</div>
-<div>
-  <%= link_to "like", matching_user_path(id: @user.id), method: :post%>
-  <%= link_to "dislike", user_path(User.except(current_user).sample(1)) %>
-
-
-
-</div>
-
-
-
-
-

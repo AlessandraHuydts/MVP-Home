@@ -1,10 +1,56 @@
-<h1>Edit page</h1>
-
-<%= current_user.first_name %>
-<%= current_user.last_name %>
-
-
-
-<%= link_to destroy_user_session_path, method: :delete do %>
+<div class="phonepage-edit">
+  <!-- <div class="welcome-message">
+    <h3>Welcome <%= current_user.first_name %></h3>
+  </div> -->
+  <!--  <div class="square1"> </div>
+  <div class="triangle1"> </div>
+  <div class="square2"> </div>
+  <div class="square3"> </div> -->
+  <div class="profile-pic">
+    <% if current_user.facebook_picture_url.nil? %>
+      <% current_user.facebook_picture_url = "https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2016/01/wallpaper-for-facebook-profile-photo.jpg"%>
+    <% end  %>
+    <%= image_tag (current_user.facebook_picture_url) %>
+  </div>
+  <div class="sign-out">
+    <%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-  <% end %>
+    <% end %>
+  </div>
+  <div class="user-profile">
+    <div class="basic-info">
+      <div class="full-name">
+        <p>Name: <%= current_user.full_name %></p>
+      </div>
+      <div class="edit-email">
+        <p>Email: <%= current_user.email %></p>
+      </div>
+    </div>
+    <div class="interests">
+      <div class="edit-cuisine">
+        <h5>Cuisine List: </h5>
+        <p><% @user.cuisine_list.each do |cuisine| %>
+            #<%= cuisine %>
+          <% end %></p>
+      </div>
+      <div class="edit-interests">
+        <h5>User interests: </h5>
+        <p><% @user.interest_list.each do |interest| %>
+            #<%= interest %>
+          <% end %></p>
+      </div>
+      <div class="edit-restrictions">
+        <h5>Restrictions: </h5>
+        <p><% @user.restriction_list.each do |restriction| %>
+            #<%= restriction %>
+          <% end %></p>
+      </div>
+    </div>
+  </div>
+  <div class="edit-bio custom-scrollbar">
+    <h5>Your biography:</h5>
+    <p><%= current_user.bio %></p>
+  </div>
+</div>
+</div>
+</div>
