@@ -1,13 +1,16 @@
 <div class="phone-page-home">
   <div class="logo-gold">
     <h1>@Home</h1>
-    <!--   <%= image_tag "logo-icon2.png" %> -->
   </div>
   <div class="tagline">
     <h3>Building connections through food</h3>
   </div>
   <div class="fb-login">
-    <%= image_tag "Group 2.png" %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to omniauth_authorize_path(resource_name, provider) do %>
+        <%= image_tag "Group 2" %>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <!--  -->
