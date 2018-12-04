@@ -2,7 +2,7 @@ Rails.application.configure do
 
   config.action_cable.url = "wss://www.at-home.top/cable"
 
-  config.action_cable.allowed_request_origins = [ "http://www.at-home.gold", " https://www.at-home.gold" ]
+  config.action_cable.allowed_request_origins = [ "http://www.at-home.top", " https://www.at-home.top" ]
 
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Verifies that versions and hashed value of the package contents in the project's package.json
