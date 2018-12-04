@@ -1,7 +1,9 @@
 class ChatRoomsController < ApplicationController
+  layout "registration", only: [:show]
   require 'open-uri'
   require 'nokogiri'
   def show
+    _layout 'registration'
     @chat_room = ChatRoom.includes(messages: :user).find(params[:id])
     # Recipe.destroy_all
     scrapeing_recipe
