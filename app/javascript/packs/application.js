@@ -4,7 +4,10 @@ import { scrollLastMessageIntoView } from 'packs/scroll';
 import { fadeOutAlert } from 'packs/fadeOutAlert';
 import { hideNavbarIcon } from 'packs/hideMatchingIconInNavbar';
 
-geoFindMe();
+if(document.querySelector('.search_query')){
+  geoFindMe();
+}
+
 // scrollLastMessageIntoView();
 if(document.getElementById('alert')){
   fadeOutAlert();
