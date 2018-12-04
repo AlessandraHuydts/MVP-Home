@@ -9,15 +9,58 @@
 }
 
 .welcome-message {
-  position: absolute;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-align: center;
+    font-size: 22px;
+    width: 80%;
   h1 {
-    color: white;
+    color: #1F1F1F;
+    font-weight: 700;
   }
 }
 .button-start-swiping {
-  position: absolute;
-  background: white;
+    //     /* right: auto; */
+    // position: absolute;
+    // background: white;
+    // top: 60%;
+    // left: 23%;
+    // padding: 15px;
+    // background: #D3AE43;
+    // color: white;
+    // font-weight: 600;
 }
 
+.content-registration-completed {
+    position: absolute;
+    border-style: solid;
+    border-color: #D3AE43;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    border: 2px solid #D3AE43;
+    top: 25%;
+    left: 10%;
+    right: 10%;
+    bottom: 35%;
+}
+
+.swiping {
+    position: absolute;
+    background: white;
+    top: 60%;
+    left: 24%;
+    right: 24%;
+    padding: 15px;
+    background: #D3AE43;
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 20px;
+}
+
+.swiping:hover {
+  box-shadow: 5px 10px 40px rgba(0,0,0,.2);
+}
 
 
