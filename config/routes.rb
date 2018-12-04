@@ -24,7 +24,9 @@ Rails.application.routes.draw do
   post 'registration/bio/edit', to: 'registration#bio_edit'
   get 'registration/completed', to: 'registration#registration_completed'
 
+
   resources :recipes, only: [:index, :show, :new, :create]
+
   post 'chat_rooms/:chat_room_id/messages', to: 'messages#create', as: :chat_room_messages
   get 'chat_rooms/:id', to: 'chat_rooms#show', as: :chat_room
   get 'chat_rooms', to: 'chat_rooms#index'

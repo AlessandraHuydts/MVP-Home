@@ -13,8 +13,11 @@ def scrapeing_recipe
     @url = base_url + element.attribute('href')
     @image_url = element.first_element_child.attribute('src')
     @name = element.attribute('title')
-    @recipe = Recipe.create!(match_id: @match.id, name: @name, url: @url, image_url: @image_url)
+    # @recipe = Recipe.create!(match_id: @match.id, name: @name, url: @url, image_url: @image_url)
   end
+end
+
+def show
 end
 
 def index
