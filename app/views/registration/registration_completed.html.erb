@@ -1,7 +1,11 @@
 <div class="phone-page-registration-completed">
-  <h1>Registration completed</h1>
-  <%= simple_form_for :search, url:  location_set_user_path(current_user), method: :post do |f| %>
-    <%= f.input :query, as: :hidden %>
-    <%= f.submit "Get swiping!" %>
-  <% end %>
+  <div class="welcome-message">
+    <h1>Registration completed</h1>
+  </div>
+  <div class="button-start-swiping">
+    <%= simple_form_for :search, url:  location_set_user_path(current_user), method: :post do |f| %>
+      <%= f.input :query, as: :hidden %>
+      <%= f.submit "Get swiping!" %>
+    <% end %>
+  </div>
 </div>
