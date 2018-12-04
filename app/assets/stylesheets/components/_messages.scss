@@ -1,3 +1,21 @@
+.phone-page-message {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: asset-url("marble-b.jpg");
+    color: #black;
+    background-size: cover;
+  }
+
+  .chatting{
+
+    margin-right: auto;
+    margin-left: auto;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+    margin-top: 30%;
+  }
 .messages {
   font-size: 14px;
   color: #868686;
@@ -6,7 +24,7 @@
   border: 1px solid #ececec;
   border-top: none;
   border-bottom-width: 0;
-  max-height: calc(100vh - 70px - 45px - 61px - 30px);
+  max-height: calc(100vh - 70px - 45px - 61px - 30px - 350px);
   overflow: scroll;
 }
 .message {
@@ -51,11 +69,47 @@ input.form-control {
   }
 }
 .chat-header {
-  background-color: #4F2F4C;
+  background-color: #D3AE43;
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
   h4 {
     margin: 0;
+  }
+}
+
+
+
+.recipe-card {
+  position: absolute;
+    border-style: solid;
+    border-color: #D3AE43;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    left: 10%;
+    top: 10%;
+    bottom: 60%;
+    /* display: inline-flex; */
+    right: 10%;
+}
+
+.recipe-image img{
+    height: 150px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.recipe-name  {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+p{
+  font-size: 17px;
+  margin-top: 9px;
+}
+
+  a{
+    color: black;
+    font-weight: 600;
   }
 }
