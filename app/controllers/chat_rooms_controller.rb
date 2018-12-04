@@ -1,4 +1,5 @@
 class ChatRoomsController < ApplicationController
+  layout "registration", only: [:show]
   require 'open-uri'
   require 'nokogiri'
   def show

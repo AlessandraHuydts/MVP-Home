@@ -78,7 +78,18 @@ input.form-control {
   }
 }
 
+.btn-chat{
+  top: 14px;
+  position: absolute;
+  left: 40px;
+  background-color: #D3AE43;
+  border-color: #D3AE43;
 
+}
+.btn-primary:active {
+  background-color: #D3AE43 !important;
+  border: 1px solid white !important;
+}
 
 .recipe-card {
   position: absolute;
