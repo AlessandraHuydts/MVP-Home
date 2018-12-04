@@ -10,8 +10,8 @@
       <h3> Dietary restrictions?</h3>
       <%= f.input :restriction_list, as: :check_boxes, collection: User::RESTRICTIONS %>
     </div>
-    <div class="complete-sign-up btn">
-      <%= f.submit "Complete!"%>
+    <div class="complete-sign-up">
+      <%= f.submit "Complete!", class: "complete"%>
     </div>
   <% end %>
 </div>

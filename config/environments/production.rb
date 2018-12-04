@@ -1,7 +1,10 @@
 Rails.application.configure do
 
+
+
   config.action_cable.url = "wss://#{ENV['RAILS_HOST']}/cable"
   config.action_cable.allowed_request_origins = [ "http://www.at-home.gold", " https://www.at-home.gold" ]
+
 
 
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
