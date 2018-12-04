@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-  config.action_cable.url = "ws://www.at-home.gold/cable"
+  config.action_cable.url = "wss://www.at-home.gold/cable"
 
   config.action_cable.allowed_request_origins = [ "http://www.at-home.gold", " http://www.at-home.gold" ]
 
