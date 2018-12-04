@@ -1,8 +1,8 @@
 Rails.application.configure do
 
+  config.action_cable.url = "ws://www.at-home.gold/cable"
 
-  config.action_cable.url = "wss://www.mvp-home.herokuapp.top/cable"
-  config.action_cable.allowed_request_origins = [ "http://www.mvp-home.herokuapp.top", "https://www.mvp-home.herokuapp.top" ]
+  config.action_cable.allowed_request_origins = [ "http://www.at-home.gold", " http://www.at-home.gold" ]
 
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Verifies that versions and hashed value of the package contents in the project's package.json

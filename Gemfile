@@ -21,6 +21,8 @@ gem 'acts_as_votable', '~> 0.12.0'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'omniauth-facebook'
 gem "geocoder"
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
