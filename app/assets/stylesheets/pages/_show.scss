@@ -16,13 +16,11 @@
     background: white;
     /* border: solid; */
     border-radius: 10px;
-    bottom: 29%;
+    bottom: 27%;
 
     box-shadow: 5px 5px 20px 1px rgba(194, 194, 194, 1);
     display: flex;
     flex-direction: column;
-
-
 }
 
 .like {
@@ -90,10 +88,6 @@ img {
   width: 88%;
 }
 
-.info h5 {
-font-weight: 500;
-}
-
 .name-header {
   margin-left: 15px;
     margin-bottom: 19px;
@@ -111,6 +105,10 @@ font-weight: 500;
 .info {
   width: 100%;
   height: 40%;
+  margin-bottom: 20px;
+  h5 {
+    font-weight: 500;
+  }
 }
 
 .chef {
