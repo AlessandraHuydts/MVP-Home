@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: asset-url("marble-b.jpg");
+    background-image: asset-url("background.png");
     color: #black;
     background-size: cover;
     font-family: Raleway;
@@ -13,7 +13,7 @@
 }
 .part2-3 {
   position: absolute;
-  background: #D3AE43;
+  background: grey;
   width: 80%;
   top: 50px;
   height: 10px;
@@ -21,13 +21,14 @@
 
 .bio-input {
       position: absolute;
-    border-style: solid;
-    border-color: #D3AE43;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
     text-align: center;
     top: 12%;
     left: 10%;
     right: 10%;
+    box-shadow: 5px 5px 20px 1px rgba(194, 194, 194, 1);    background: rgba(255, 255, 255, 1);
+    text-align: center;
     .form-control {
       height: 150px;
       padding: 10px;
@@ -38,13 +39,14 @@
 }
 .restriction-form {
       position: absolute;
-    border-style: solid;
-    border-color: #D3AE43;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
     text-align: center;
     left: 10%;
     right: 10%;
+    border-radius: 10px;
     top: 50%;
+    box-shadow: 5px 5px 20px 1px rgba(194, 194, 194, 1);    background: rgba(255, 255, 255, 1);
+    text-align: center;
 }
 
 
@@ -62,16 +64,17 @@ position: absolute;
 
 .complete {
   position: absolute;
-    background: #D3AE43;
+    background: #f86c94;
     top: 80%;
     right: 11%;
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #F6F4EF;
+    color: white;
     font-weight: bold;
     font-size: 20px;
     border: none;
+    border-radius: 10px;
 }
 .form-control-label {
   display: none;
