@@ -1,10 +1,10 @@
 <div class="phone-page-message">
-  <%= link_to ' ← back', chat_rooms_path, class: "btn-chat btn btn-primary" %>
+  <%= link_to ' ← Back', chat_rooms_path, class: "btn-chat btn btn-primary" %>
   <!--  -->
   <div class="container chatting">
     <div class="row-chat">
       <div class="col-sm-6 col-sm-offset-3">
-        <div class="chat-header">
+        <div class="chat-header" id= "target-for-recipe">
           <% if @chat_room.match.user1 != current_user %>
             <h4> <%= @chat_room.match.user1.first_name %></h4>
           <% else %>
@@ -51,11 +51,3 @@
     </script>
   <% end %>
 </div>
-<!-- <div class="recipe-card">
-    <div class="recipe-image">
-      <%= image_tag(@recipe.image_url) %>
-    </div>
-    <div class="recipe-name">
-      <p> <%= link_to @recipe.name, @recipe.url %></p>
-    </div>
-  </div> -->

@@ -24,9 +24,11 @@ class UsersController < ApplicationController
     if @user.matched?(current_user)
       match = Match.create!(user1_id: current_user.id, user2_id: @user.id)
       ChatRoom.create!(match: match)
-      redirect_to user_path(current_user.nearbys.sample(1))
+      redirect_to user_path(User.all_except(current_user).sample)
+      # redirect_to user_path(current_user.nearbys.sample(1)) commented out for demo
     else
-      redirect_to user_path(current_user.nearbys.sample(1))
+      redirect_to user_path(User.all_except(current_user).sample)
+      # redirect_to user_path(current_user.nearbys.sample(1)) commented out for demo
     end
   end
 
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
       longitude: longitude
     )
     @user.save
-
-    redirect_to user_path(current_user.nearbys.sample.id)
+    redirect_to user_path(User.all_except(current_user).sample)
+    # redirect_to user_path(current_user.nearbys.sample.id) commented out for demo
   end
 end

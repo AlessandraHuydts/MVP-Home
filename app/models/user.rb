@@ -18,6 +18,10 @@ class User < ApplicationRecord
   reverse_geocoded_by :latitude, :longitude
   after_validation :reverse_geocode
 
+  def self.all_except(user)
+    where.not(id: user)
+  end
+
   def matched?(user2)
     self.liked? user2
   end
