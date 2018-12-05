@@ -255,8 +255,8 @@ puts "Jack has the following tags #{jack.cuisine_list}, #{jack.interest_list}, #
 
 puts "Assigning Tags to Moshe...."
 moshe = User.find_by(first_name: "Moshe")
-moshe.cuisine_list.add("Chinese", "French", "Spanish")
-moshe.interest_list.add("Play piano", "Code", "Draw")
+moshe.cuisine_list.add("Chinese", "Spanish")
+moshe.interest_list.add("Code", "Draw")
 moshe.restriction_list.add("Kosher")
 moshe.save
 puts "Moshe has the following tags #{moshe.cuisine_list}, #{moshe.interest_list}, #{moshe.restriction_list}"
