@@ -12,12 +12,13 @@
           <% end %>
         </div>
         <div id="recipe-slider">
-          <h4> Recipe</h4>
+          <h4>  ↓ Recipe</h4>
         </div>
         <div id="recipe-content" class="recipe-dropdown-content recipe-bar-block recipe-border">
           <div class="recipe-image">
             <%= image_tag(@recipe.image_url) %>
           </div>
+          <div class="dark-overlay"></div>
           <div class="recipe-name">
             <p> <%= link_to @recipe.name, @recipe.url %></p>
           </div>
