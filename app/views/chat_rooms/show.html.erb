@@ -4,7 +4,7 @@
   <div class="container chatting">
     <div class="row-chat">
       <div class="col-sm-6 col-sm-offset-3">
-        <div class="chat-header">
+        <div class="chat-header" id= "target-for-recipe">
           <% if @chat_room.match.user1 != current_user %>
             <h4> <%= @chat_room.match.user1.first_name %></h4>
           <% else %>
