@@ -239,7 +239,7 @@ puts "Daniel has the following tags #{daniel.cuisine_list}, #{daniel.interest_li
 
 puts "Assigning Tags to Gabriel...."
 gabriel = User.find_by(first_name: "Gabriel")
-gabriel.cuisine_list.add("Chinese", "Indian", "Spanish")
+gabriel.cuisine_list.add("French", "Spanish")
 gabriel.interest_list.add("play piano", "code", "travel")
 gabriel.restriction_list.add("Vegetarian")
 gabriel.save
@@ -295,7 +295,7 @@ puts "yoann has the following tags #{yoann.cuisine_list}, #{yoann.interest_list}
 
 puts "Assigning Tags to Zaneta...."
 zaneta = User.find_by(first_name: "Zaneta")
-zaneta.cuisine_list.add("Korean", "Mexican", "Spanish")
+zaneta.cuisine_list.add("Mexican", "Spanish")
 zaneta.interest_list.add("read", "write", "draw")
 zaneta.restriction_list.add("Vegetarian", "Lactose-Free")
 zaneta.save
