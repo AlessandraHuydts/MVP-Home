@@ -1,0 +1,26 @@
+.recipe-slider {
+
+}
+
+.recipe-content {
+  border: 1px solid black;
+}
+
+.recipe-border {
+    border: 1px solid #ccc!important;
+}
+.recipe-show-block, .recipe-show {
+    display: block!important;
+}
+
+.recipe-dropdown-content {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}

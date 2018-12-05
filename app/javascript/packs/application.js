@@ -3,6 +3,7 @@ import { geoFindMe } from 'packs/location';
 import { scrollLastMessageIntoView } from 'packs/scroll';
 import { fadeOutAlert } from 'packs/fadeOutAlert';
 import { hideNavbarIcon } from 'packs/hideMatchingIconInNavbar';
+import { add_recipe_toggle } from '../components/recipe_toggle';
 
 if(document.querySelector('.search_query')){
   geoFindMe();
@@ -16,4 +17,6 @@ if(document.getElementById('alert')){
 if (document.getElementById('target-hide-icon-navbar')){
   hideNavbarIcon();
 }
+
+add_recipe_toggle();
 
