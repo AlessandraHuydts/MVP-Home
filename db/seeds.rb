@@ -175,7 +175,7 @@ puts "Created #{User.count} users"
 puts "Assigning Tags to Alessandra...."
 alessandra = User.find_by(first_name: "Alessandra")
 alessandra.cuisine_list.add("Israeli", "Japanese", "Italian")
-alessandra.interest_list.add("swim", "cook", "travel")
+alessandra.interest_list.add("Swim", "Cook", "Travel")
 alessandra.restriction_list.add("Gluten-Free", "Lactose-Free")
 alessandra.save
 puts "Alessandra has the following tags #{alessandra.cuisine_list}, #{alessandra.interest_list}, #{alessandra.restriction_list}"
@@ -183,7 +183,7 @@ puts "Alessandra has the following tags #{alessandra.cuisine_list}, #{alessandra
 puts "Assigning Tags to Leah...."
 leah = User.find_by(first_name: "Leah")
 leah.cuisine_list.add("French", "Italian", "Isreali")
-leah.interest_list.add("read", "travel")
+leah.interest_list.add("Read", "Travel")
 leah.restriction_list.add("Vegetarian")
 leah.save
 puts "Leah has the following tags #{leah.cuisine_list}, #{leah.interest_list}, #{leah.restriction_list}"
@@ -192,7 +192,7 @@ puts "Leah has the following tags #{leah.cuisine_list}, #{leah.interest_list}, #
 puts "Assigning Tags to Salo...."
 salo = User.find_by(first_name: "Salo")
 salo.cuisine_list.add("Mexican", "Italian", "Israeli")
-salo.interest_list.add("code", "swim", "run")
+salo.interest_list.add("Code", "Swim", "Run")
 salo.restriction_list.add("Kosher")
 salo.save
 puts "Salo has the following tags #{salo.cuisine_list}, #{salo.interest_list}, #{salo.restriction_list}"
@@ -200,7 +200,7 @@ puts "Salo has the following tags #{salo.cuisine_list}, #{salo.interest_list}, #
 puts "Assigning Tags to Emmanuel...."
 emmanuel = User.find_by(first_name: "Emmanuel")
 emmanuel.cuisine_list.add("Greek", "Chinese", "French")
-emmanuel.interest_list.add("code", "swim", "run")
+emmanuel.interest_list.add("Code", "Swim", "Run")
 emmanuel.restriction_list.add("Vegan")
 emmanuel.save
 puts "Emmanuel has the following tags #{emmanuel.cuisine_list}, #{emmanuel.interest_list}, #{emmanuel.restriction_list}"
@@ -208,7 +208,7 @@ puts "Emmanuel has the following tags #{emmanuel.cuisine_list}, #{emmanuel.inter
 puts "Assigning Tags to Baraa...."
 baraa = User.find_by(first_name: "Baraa")
 baraa.cuisine_list.add("Korean", "Indian", "Spanish")
-baraa.interest_list.add("play piano", "code", "draw")
+baraa.interest_list.add("Play piano", "Code", "Draw")
 baraa.restriction_list.add("Gluten-Free")
 baraa.save
 puts "Baraa has the following tags #{baraa.cuisine_list}, #{baraa.interest_list}, #{baraa.restriction_list}"
@@ -216,7 +216,7 @@ puts "Baraa has the following tags #{baraa.cuisine_list}, #{baraa.interest_list}
 puts "Assigning Tags to Alan...."
 alan = User.find_by(first_name: "Alan")
 alan.cuisine_list.add("French", "Thai", "Spanish")
-alan.interest_list.add("swim", "code", "write")
+alan.interest_list.add("Swim", "Code", "Write")
 alan.restriction_list.add("Gluten-Free")
 alan.save
 puts "Alan has the following tags #{alan.cuisine_list}, #{alan.interest_list}, #{alan.restriction_list}"
@@ -224,7 +224,7 @@ puts "Alan has the following tags #{alan.cuisine_list}, #{alan.interest_list}, #
 puts "Assigning Tags to Cory...."
 cory = User.find_by(first_name: "Cory")
 cory.cuisine_list.add("Israeli", "Indian", "Spanish")
-cory.interest_list.add("write", "code", "read")
+cory.interest_list.add("Write", "Code", "Read")
 cory.restriction_list.add("Lactose-Free")
 cory.save
 puts "Cory has the following tags #{cory.cuisine_list}, #{cory.interest_list}, #{cory.restriction_list}"
@@ -232,7 +232,7 @@ puts "Cory has the following tags #{cory.cuisine_list}, #{cory.interest_list}, #
 puts "Assigning Tags to Daniel...."
 daniel = User.find_by(first_name: "Daniel")
 daniel.cuisine_list.add("French", "Indian", "Spanish")
-daniel.interest_list.add("read", "code", "travel")
+daniel.interest_list.add("Read", "Code", "Travel")
 daniel.restriction_list.add("Kosher")
 daniel.save
 puts "Daniel has the following tags #{daniel.cuisine_list}, #{daniel.interest_list}, #{daniel.restriction_list}"
@@ -240,7 +240,7 @@ puts "Daniel has the following tags #{daniel.cuisine_list}, #{daniel.interest_li
 puts "Assigning Tags to Gabriel...."
 gabriel = User.find_by(first_name: "Gabriel")
 gabriel.cuisine_list.add("French", "Spanish")
-gabriel.interest_list.add("play piano", "code", "travel")
+gabriel.interest_list.add("Play piano", "Code", "Travel")
 gabriel.restriction_list.add("Vegetarian")
 gabriel.save
 puts "Gabriel has the following tags #{gabriel.cuisine_list}, #{gabriel.interest_list}, #{gabriel.restriction_list}"
@@ -248,7 +248,7 @@ puts "Gabriel has the following tags #{gabriel.cuisine_list}, #{gabriel.interest
 puts "Assigning Tags to Jack...."
 jack = User.find_by(first_name: "Jack")
 jack.cuisine_list.add("Korean", "Indian", "Spanish")
-jack.interest_list.add("cook", "code", "read")
+jack.interest_list.add("Cook", "Code", "Read")
 jack.restriction_list.add("Gluten-Free")
 jack.save
 puts "Jack has the following tags #{jack.cuisine_list}, #{jack.interest_list}, #{jack.restriction_list}"
@@ -256,7 +256,7 @@ puts "Jack has the following tags #{jack.cuisine_list}, #{jack.interest_list}, #
 puts "Assigning Tags to Moshe...."
 moshe = User.find_by(first_name: "Moshe")
 moshe.cuisine_list.add("Chinese", "French", "Spanish")
-moshe.interest_list.add("play piano", "code", "draw")
+moshe.interest_list.add("Play piano", "Code", "Draw")
 moshe.restriction_list.add("Kosher")
 moshe.save
 puts "Moshe has the following tags #{moshe.cuisine_list}, #{moshe.interest_list}, #{moshe.restriction_list}"
@@ -264,7 +264,7 @@ puts "Moshe has the following tags #{moshe.cuisine_list}, #{moshe.interest_list}
 puts "Assigning Tags to Narmeen...."
 narmeen = User.find_by(first_name: "Narmeen")
 narmeen.cuisine_list.add("Korean", "French", "Italian")
-narmeen.interest_list.add("play piano", "code", "travel")
+narmeen.interest_list.add("Play piano", "Code", "Travel")
 narmeen.restriction_list.add("Gluten-Free")
 narmeen.save
 puts "Narmeen has the following tags #{narmeen.cuisine_list}, #{narmeen.interest_list}, #{narmeen.restriction_list}"
@@ -272,7 +272,7 @@ puts "Narmeen has the following tags #{narmeen.cuisine_list}, #{narmeen.interest
 puts "Assigning Tags to Ruben...."
 ruben = User.find_by(first_name: "Ruben")
 ruben.cuisine_list.add("Korean", "Italian", "Chinese")
-ruben.interest_list.add("swim", "code", "draw")
+ruben.interest_list.add("Swim", "Code", "Draw")
 ruben.restriction_list.add("Lactose-Free")
 ruben.save
 puts "ruben has the following tags #{ruben.cuisine_list}, #{ruben.interest_list}, #{ruben.restriction_list}"
@@ -280,7 +280,7 @@ puts "ruben has the following tags #{ruben.cuisine_list}, #{ruben.interest_list}
 puts "Assigning Tags to Thomas...."
 thomas = User.find_by(first_name: "Thomas")
 thomas.cuisine_list.add("Korean", "Indian", "Spanish")
-thomas.interest_list.add("read", "code", "draw")
+thomas.interest_list.add("Read", "Code", "Draw")
 thomas.restriction_list.add("Vegan")
 thomas.save
 puts "thomas has the following tags #{thomas.cuisine_list}, #{thomas.interest_list}, #{thomas.restriction_list}"
@@ -288,7 +288,7 @@ puts "thomas has the following tags #{thomas.cuisine_list}, #{thomas.interest_li
 puts "Assigning Tags to Yoann...."
 yoann = User.find_by(first_name: "Yoann")
 yoann.cuisine_list.add("Chinese", "Indian", "Israeli")
-yoann.interest_list.add("swim", "code", "write")
+yoann.interest_list.add("Swim", "Code", "Write")
 yoann.restriction_list.add("Vegan")
 yoann.save
 puts "yoann has the following tags #{yoann.cuisine_list}, #{yoann.interest_list}, #{yoann.restriction_list}"
@@ -296,7 +296,7 @@ puts "yoann has the following tags #{yoann.cuisine_list}, #{yoann.interest_list}
 puts "Assigning Tags to Zaneta...."
 zaneta = User.find_by(first_name: "Zaneta")
 zaneta.cuisine_list.add("Mexican", "Spanish")
-zaneta.interest_list.add("read", "write", "draw")
+zaneta.interest_list.add("Read", "Write", "Draw")
 zaneta.restriction_list.add("Vegetarian", "Lactose-Free")
 zaneta.save
 puts "zaneta has the following tags #{zaneta.cuisine_list}, #{zaneta.interest_list}, #{zaneta.restriction_list}"

@@ -27,7 +27,7 @@
         </div>
         <div class="interest-list tags">
           <p><% @user.interest_list.each do |interest| %>
-              <span class="tag"><%= interest %></span>
+              <span class="tag"><%= interest.capitalize %></span>
             <% end %></p>
         </div>
       </div>
@@ -44,3 +44,4 @@
     <% end %>
   </div>
 </div>
+<a href="https://icons8.com">Icon pack by Icons8</a>
