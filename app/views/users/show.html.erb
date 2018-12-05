@@ -1,5 +1,6 @@
 <div class="phonepage">
   <div class="swipecard">
+    <script src="sweetalert2.all.min.js"></script>
     <div class="user-img-swipe">
       <%= image_tag (@user.facebook_picture_url) %>
     </div>
@@ -45,4 +46,6 @@
     <% end %>
   </div>
 </div>
-<i class="fas fa-times-circle"></i>
+<% if params["match"] == "matches" %>
+  <div id="sweet-alert-target" value= <%= params["name"] %>></div>
+<% end %>
