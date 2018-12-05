@@ -27,12 +27,13 @@
         </div>
         <div class="interest-list tags">
           <p><% @user.interest_list.each do |interest| %>
-              <span class="tag"><%= interest %></span>
+              <span class="tag"><%= interest.capitalize %></span>
             <% end %></p>
         </div>
       </div>
     </div>
   </div>
+  <div id="target-hide-icon-navbar"></div>
   <div class="like">
     <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
       <%= image_tag "like.png" %>
@@ -40,7 +41,8 @@
   </div>
   <div class="dislike">
     <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
-      <%= image_tag "dislike.png" %>
+      <%= image_tag "block.png" %>
     <% end %>
   </div>
 </div>
+<i class="fas fa-times-circle"></i>
