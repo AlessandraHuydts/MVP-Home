@@ -7,21 +7,26 @@
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    background-image: asset-url("marble-b.jpg");
+    background-image: asset-url("background.png");
     color: #black;
     background-size: cover;
 }
 
 .header-matches {
-  color: #D3AE43;
-  text-align: center;
-  right: 25%;
-  top: 5%;
-  text-decoration: bold;
-  margin: 15px 0px;
+   color: white;
+    text-align: center;
+    right: 25%;
+    top: 5%;
+    height: 10%;
+    text-decoration: bold;
+    margin: 15px 0px;
+    right: 13%;
+    width: 100%;
 
   h1{
     font-weight: 800;
+        left: 10%;
+    position: absolute;
   }
 
 
@@ -45,12 +50,13 @@
 }
 
 .match-card {
-  background-color: #F1F1F1;
+  background-color: white;
   width: 80%;
   height: 100px;
   margin: 10px 0px;
   display: flex;
-  border: 1px solid #D3AE43;
+  border-radius: 4px;
+  box-shadow:   1px 1px 4px 1px #c2c2c2;
 }
 
 .user-avatar{

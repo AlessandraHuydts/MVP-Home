@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
     <div class="profile-icon">
       <%= link_to edit_user_path(current_user), class: "navbar-wagon-brand" do %>
-        <%= image_tag "user.png", height: 50 %>
+        <%= image_tag "user-grey.png", height: 50 %>
       <% end %>
     </div>
     <div class="matching-icon">
@@ -12,7 +12,7 @@
     </div>
     <div class="paper-plane-icon">
       <%= link_to chat_rooms_path, class: "navbar-wagon-brand" do %>
-        <%= image_tag "paper-plane.png", height: 50 %>
+        <%= image_tag "chat.png", height: 50 %>
       <% end %>
     </div>
   <% else %>
