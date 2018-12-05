@@ -5,10 +5,10 @@
     </div>
     <div class="info">
       <div class="name-header">
-        <% if @user.full_name.length <= 14 %>
+        <% if @user.full_name.length <= 10 %>
           <h1><%= @user.full_name %></h1>
         <% else %>
-          <h2><%= @user.full_name %></h2>
+          <h3><%= @user.full_name %></h3>
         <% end %>
       </div>
       <div class="row_cuisines">
@@ -32,5 +32,15 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="like">
+    <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+      <%= image_tag "like.png" %>
+    <% end %>
+  </div>
+  <div class="dislike">
+    <%= link_to matching_user_path(id: @user.id), method: :post, class: "navbar-wagon-brand" do %>
+      <%= image_tag "dislike.png" %>
+    <% end %>
   </div>
 </div>

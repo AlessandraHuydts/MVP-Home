@@ -175,7 +175,7 @@ puts "Created #{User.count} users"
 puts "Assigning Tags to Alessandra...."
 alessandra = User.find_by(first_name: "Alessandra")
 alessandra.cuisine_list.add("Israeli", "Japanese", "Italian")
-alessandra.interest_list.add("swim", "cook", "code", "travel")
+alessandra.interest_list.add("swim", "cook", "travel")
 alessandra.restriction_list.add("Gluten-Free", "Lactose-Free")
 alessandra.save
 puts "Alessandra has the following tags #{alessandra.cuisine_list}, #{alessandra.interest_list}, #{alessandra.restriction_list}"
