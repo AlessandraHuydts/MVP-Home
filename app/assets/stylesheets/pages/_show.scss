@@ -25,6 +25,30 @@
 
 }
 
+.like {
+  img {
+    height: 60px;
+    margin-right: 15px;
+  }
+  img:active {
+    border-radius: 50%;
+    border: solid;
+    filter: blur(2px);
+  }
+}
+
+.dislike {
+  img {
+    height: 60px;
+    margin-left: 15px;
+  }
+  img:active {
+    border-radius: 50%;
+    border: solid;
+    filter: blur(2px);
+  }
+}
+
 .user-img-swipe {
     height: 65%;
     width: 100%;
