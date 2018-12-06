@@ -98,16 +98,17 @@ input.form-control {
 }
 
 .btn-chat{
-      top: 14px;
+    top: 24px;
     position: absolute;
     left: 40px;
     background-color: white;
     border-color: #f06460;
     color: #f06460;
     border-radius: 10px;
+    padding: 10px;
 
 }
-.btn-primary:active {
+.btn-chat:active {
   background-color: white !important;
   opacity: 0;
   border: 1px solid white !important;

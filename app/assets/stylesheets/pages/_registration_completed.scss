@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: asset-url("cooking1.jpg");
+    background-image: asset-url("kitchen4.jpg");
     color: #black;
     background-size: cover;
 }
@@ -50,15 +50,14 @@
 .swiping {
     position: absolute;
     background: white;
-    top: 53%;
-    left: 15%;
-    right: 15%;
+    top: 49%;
+    left: 13%;
+    right: 14%;
     padding: 19px;
     background: #D3AE43;
     color: white;
     font-weight: 600;
     border: none;
-    font-size: 31px;
 }
 
 .swiping:hover {
@@ -67,13 +66,17 @@
 
 .images-swipe {
   position: absolute;
-  bottom: 48%;
+  bottom: 3%;
   left: 10%;
   img {
     height: 160px;
 
   }
 
+}
+
+ input.swiping {
+  font-size: 25px;
 }
 
 
