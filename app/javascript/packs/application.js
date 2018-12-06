@@ -9,12 +9,7 @@ import { callSweetAlert } from 'packs/sweetAlert';
 const targetNavbar = document.getElementById('target-hide-icon-navbar');
 if (targetNavbar){
   hideNavbarIcon();
-  addEventListener("load", function() {
-    window.scrollTo(1, 0);
-}, false);
 }
-
-
 
 // scrollLastMessageIntoView();
 if(document.querySelector('.search_query')){
