@@ -8,16 +8,6 @@ User.destroy_all
 puts "Creating users.."
 user_attributes = [
   {
-    first_name: "Alessandra",
-    last_name: "Huydts",
-    email: "alessandra@gmail.com",
-    password: "12345678",
-    latitude: 10.0763317,
-    longitude: 20.7661526,
-    facebook_picture_url: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1543526849/ale.jpg",
-    bio: " I am half German and half Dutch, but currently live in Tel Aviv. I love to cook, bake, swim and spend time with friends. I am very exited to try this application:)"
-  },
-  {
     first_name: "Leah",
     last_name: "Sadoun",
     email: "leah@gmail.com",
@@ -172,14 +162,6 @@ I was in Hi-Tech sales and customer service, and now I want to cross over."
 User.create!(user_attributes)
 puts "Created #{User.count} users"
 
-puts "Assigning Tags to Alessandra...."
-alessandra = User.find_by(first_name: "Alessandra")
-alessandra.cuisine_list.add("Israeli", "Japanese", "Italian")
-alessandra.interest_list.add("Swim", "Cook", "Travel")
-alessandra.restriction_list.add("Gluten-Free", "Lactose-Free")
-alessandra.save
-puts "Alessandra has the following tags #{alessandra.cuisine_list}, #{alessandra.interest_list}, #{alessandra.restriction_list}"
-
 puts "Assigning Tags to Leah...."
 leah = User.find_by(first_name: "Leah")
 leah.cuisine_list.add("French", "Italian", "Isreali")
@@ -199,7 +181,7 @@ puts "Salo has the following tags #{salo.cuisine_list}, #{salo.interest_list}, #
 
 puts "Assigning Tags to Emmanuel...."
 emmanuel = User.find_by(first_name: "Emmanuel")
-emmanuel.cuisine_list.add("Greek", "Chinese", "French")
+emmanuel.cuisine_list.add("Israeli", "Chinese")
 emmanuel.interest_list.add("Code", "Swim", "Run")
 emmanuel.restriction_list.add("Vegan")
 emmanuel.save
@@ -207,7 +189,7 @@ puts "Emmanuel has the following tags #{emmanuel.cuisine_list}, #{emmanuel.inter
 
 puts "Assigning Tags to Baraa...."
 baraa = User.find_by(first_name: "Baraa")
-baraa.cuisine_list.add("Korean", "Indian", "Spanish")
+baraa.cuisine_list.add("Israeli", "French", "Spanish")
 baraa.interest_list.add("Play piano", "Code", "Draw")
 baraa.restriction_list.add("Gluten-Free")
 baraa.save
@@ -215,7 +197,7 @@ puts "Baraa has the following tags #{baraa.cuisine_list}, #{baraa.interest_list}
 
 puts "Assigning Tags to Alan...."
 alan = User.find_by(first_name: "Alan")
-alan.cuisine_list.add("French", "Thai", "Spanish")
+alan.cuisine_list.add("Israeli", "Thai")
 alan.interest_list.add("Swim", "Code", "Write")
 alan.restriction_list.add("Gluten-Free")
 alan.save
@@ -231,7 +213,7 @@ puts "Cory has the following tags #{cory.cuisine_list}, #{cory.interest_list}, #
 
 puts "Assigning Tags to Daniel...."
 daniel = User.find_by(first_name: "Daniel")
-daniel.cuisine_list.add("French", "Indian", "Spanish")
+daniel.cuisine_list.add("French", "Indian", "Israeli")
 daniel.interest_list.add("Read", "Code", "Travel")
 daniel.restriction_list.add("Kosher")
 daniel.save
@@ -239,7 +221,7 @@ puts "Daniel has the following tags #{daniel.cuisine_list}, #{daniel.interest_li
 
 puts "Assigning Tags to Gabriel...."
 gabriel = User.find_by(first_name: "Gabriel")
-gabriel.cuisine_list.add("French", "Spanish")
+gabriel.cuisine_list.add("French", "Israeli")
 gabriel.interest_list.add("Play piano", "Code", "Travel")
 gabriel.restriction_list.add("Vegetarian")
 gabriel.save
@@ -247,7 +229,7 @@ puts "Gabriel has the following tags #{gabriel.cuisine_list}, #{gabriel.interest
 
 puts "Assigning Tags to Jack...."
 jack = User.find_by(first_name: "Jack")
-jack.cuisine_list.add("Korean", "Indian", "Spanish")
+jack.cuisine_list.add("Thai", "Israeli", "Spanish")
 jack.interest_list.add("Cook", "Code", "Read")
 jack.restriction_list.add("Gluten-Free")
 jack.save
@@ -255,7 +237,7 @@ puts "Jack has the following tags #{jack.cuisine_list}, #{jack.interest_list}, #
 
 puts "Assigning Tags to Moshe...."
 moshe = User.find_by(first_name: "Moshe")
-moshe.cuisine_list.add("Chinese", "Spanish")
+moshe.cuisine_list.add("Israeli", "Spanish")
 moshe.interest_list.add("Code", "Draw")
 moshe.restriction_list.add("Kosher")
 moshe.save
@@ -263,7 +245,7 @@ puts "Moshe has the following tags #{moshe.cuisine_list}, #{moshe.interest_list}
 
 puts "Assigning Tags to Narmeen...."
 narmeen = User.find_by(first_name: "Narmeen")
-narmeen.cuisine_list.add("Korean", "French", "Italian")
+narmeen.cuisine_list.add("Korean", "French", "Israeli")
 narmeen.interest_list.add("Play piano", "Code", "Travel")
 narmeen.restriction_list.add("Gluten-Free")
 narmeen.save
@@ -271,7 +253,7 @@ puts "Narmeen has the following tags #{narmeen.cuisine_list}, #{narmeen.interest
 
 puts "Assigning Tags to Ruben...."
 ruben = User.find_by(first_name: "Ruben")
-ruben.cuisine_list.add("Korean", "Italian", "Chinese")
+ruben.cuisine_list.add("Korean", "Israeli", "Chinese")
 ruben.interest_list.add("Swim", "Code", "Draw")
 ruben.restriction_list.add("Lactose-Free")
 ruben.save
@@ -279,7 +261,7 @@ puts "ruben has the following tags #{ruben.cuisine_list}, #{ruben.interest_list}
 
 puts "Assigning Tags to Thomas...."
 thomas = User.find_by(first_name: "Thomas")
-thomas.cuisine_list.add("Korean", "Indian", "Spanish")
+thomas.cuisine_list.add("Korean", "Indian", "Israeli")
 thomas.interest_list.add("Read", "Code", "Draw")
 thomas.restriction_list.add("Vegan")
 thomas.save
@@ -295,28 +277,8 @@ puts "yoann has the following tags #{yoann.cuisine_list}, #{yoann.interest_list}
 
 puts "Assigning Tags to Zaneta...."
 zaneta = User.find_by(first_name: "Zaneta")
-zaneta.cuisine_list.add("Mexican", "Spanish")
+zaneta.cuisine_list.add("Mexican", "Israeli")
 zaneta.interest_list.add("Read", "Write", "Draw")
 zaneta.restriction_list.add("Vegetarian", "Lactose-Free")
 zaneta.save
 puts "zaneta has the following tags #{zaneta.cuisine_list}, #{zaneta.interest_list}, #{zaneta.restriction_list}"
-
-puts "Creating matches.."
-
-puts "Creating a Match between Alessandra and Leah"
-match1 = Match.create!(user1: User.first, user2: User.second)
-ChatRoom.create!(match: match1)
-
-puts "Creating a Match between Alessandra and Salo"
-match2 = Match.create!(user1: User.third, user2: User.first)
-ChatRoom.create!(match: match2)
-
-puts "Creating a Match between Alessandra and Emmanuel"
-match3 = Match.create!(user1: User.first, user2: User.fourth)
-ChatRoom.create!(match: match3)
-
-puts "Creating a Match between Salo and Emmanuel"
-match4 = Match.create!(user1: User.third, user2: User.fourth)
-ChatRoom.create!(match: match4)
-
-puts "Created #{Match.count} matches and #{ChatRoom.count} Chatrooms"
