@@ -1,5 +1,5 @@
 function hideNavbarIcon(){
-  $(".matching-icon").hide()
+  $(".matching-icon").hide();
 }
 
 export { hideNavbarIcon }
